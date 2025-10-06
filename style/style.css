@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-heading: 'Alkalami', serif;
+    --font-serif: 'Montserrat', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+
+    --color-bg: #ffffff;
+    --color-text: #202020;
+    --color-primary: #0D4377;
+    --color-secondary: #020202;
+    --color-accent: #FFAE00;
+    --color-hover: #083660;
+    --color-active: #2563EB;
+    --color-disabled: #9CA3AF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
