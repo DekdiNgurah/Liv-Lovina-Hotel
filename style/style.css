@@ -1,24 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     box-sizing: border-box;
+    /* border: 1px solid blue; */
 }
 
 :root {
     --font-heading: 'Alkalami', serif;
-    --font-serif: 'Montserrat', sans-serif;
-    --font-sans: 'Inter', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-inter: 'Inter', sans-serif;
 
     --color-bg: #ffffff;
     --color-text: #202020;
     --color-primary: #0D4377;
     --color-secondary: #020202;
     --color-accent: #FFAE00;
-    --color-hover: #083660;
+    --color-hover: #062d51;
     --color-active: #2563EB;
     --color-disabled: #9CA3AF;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* NAVBAR START */
+nav ul li a {
+    font-family: var(--font-inter);
+    font-weight: bold;
+    transition: .3s all ;
 }
+
+nav ul li .active {
+    color: var(--color-primary);
+}
+
+nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+nav .hamburger {
+  height: auto;
+  width: auto;
+  position: relative;
+  z-index: 50;
+}
+
+nav .hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  z-index: 50;
+}
+/* NAVBAR END */
