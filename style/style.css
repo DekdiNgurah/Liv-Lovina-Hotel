@@ -50,3 +50,17 @@ nav .hamburger .checkbox {
   z-index: 50;
 }
 /* NAVBAR END */
+
+/* UNIVERSAL HEADING CSS START */
+.text-headings {
+    font-family: var(--font-heading);
+}
+
+.text-montserrat {
+    font-family: var(--font-montserrat);
+}
+
+.text-inter {
+    font-family: var(--font-inter);
+}
+/* UNIVERSAL HEADING CSS END */
