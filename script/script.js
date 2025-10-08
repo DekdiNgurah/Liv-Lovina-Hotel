@@ -1,4 +1,4 @@
-// NAVBAR 
+// NAVBAR START
 const toggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -6,10 +6,10 @@ toggle.addEventListener("change", () => {
     if (toggle.checked) {
         mobileMenu.classList.remove("hidden");
         const height = mobileMenu.scrollHeight + "px";
-        mobileMenu.style.height = "0px"; // Reset height to 0 for transition
+        mobileMenu.style.height = "0px"; 
 
         requestAnimationFrame(() => {
-            mobileMenu.style.height = height; // Set to full height for slide down
+            mobileMenu.style.height = height; 
         });
 
         mobileMenu.addEventListener("transitionend", function handler() {
@@ -46,3 +46,4 @@ window.addEventListener("scroll", () => {
     }
 
 })
+// NAVBAR END

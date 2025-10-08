@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+
+    <!-- INTERNAL CUSTOM STYLES ADDED -->
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50">
+    <!-- NAVBAR -->
+    <nav class="w-full">
+        <div id="navbar"
+            class="w-full bg-white lg:bg-transparent fixed top-0 left-0 z-50 transition-transform duration-500 ease-in-out  md:px-10 lg:px-15 xl:px-15 2xl:px-15">
+            <div
+                class="navbar flex justify-between items-center px-4 md:px-0 lg:px-0 xl:px-0 2xl:px-0 py-3 md:py-4 lg:py-4 xl:py-4 2xl:py-4">
+
+                <div class="hamburger lg:hidden">
+                    <input id="menu-toggle" class="checkbox" type="checkbox" />
+                    <svg fill="none" viewBox="0 0 46 50" height="40" width="40">
+                        <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 11L44 11" />
+                        <path class="lineMid line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 24H43" />
+                        <path class="lineBottom line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 37H43" />
+                    </svg>
+                </div>
+
+                <div class="hidden lg:flex flex-1 items-center justify-between lg:py-2 lg:pt-7">
+
+                    <div class="nav-parent w-full lg:px-70">
+                        <ul class="nav-list flex justify-between w-full items-center">
+                            <li class="px-[10px] py-[6px]">
+                                <a href="index.html">
+                                    <span class="text-xl text-white">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px] lg:text-sm">
+                                <a href="about.html">
+                                    <span class="text-xl text-white active">
+                                        About&nbsp;us
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="contact.html">
+                                    <span class="text-xl text-white">
+                                        Rooms
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="javascript:void(0)">
+                                    <span class="text-xl text-white">
+                                        Blog</span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="javascript:void(0)">
+                                    <span class="text-xl text-white">
+                                        Gallery</span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="javascript:void(0)">
+                                    <span class="text-xl text-white">
+                                        Contact&nbsp;Us</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span
+                                        class="text-lg text-uppercase text-white px-7 py-4 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-hover)] duration-300 transition-all cursor-pointer">
+                                        BOOK&nbsp;NOW</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div id="mobile-menu" class="lg:hidden hidden transition-all duration-900 ease-in-out overflow-hidden">
+                <ul class="flex flex-col gap-4 py-5 pl-5 md:pl-2">
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Home</a></li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl active">About
+                            Us</a></li>
+                    <li><a href="contact.html" class="block text-gray-700 text-xl md:text-2xl">Rooms</a></li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Blog</a>
+                    </li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Gallery</a>
+                    </li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Contact Us</a>
+                    </li>
+                    <li class="px-7 py-3 rounded-full bg-[var(--color-primary)] w-fit">
+                        <a href="javascript:void(0)" class="block text-white text-xl md:text-2xl text-uppercase">Book
+                            Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="">
+        <div class="relative w-full">
+            <!-- Gambar Hero -->
+            <img src="assets/images/herosection.png" class="w-full h-[300px] md:h-[500px] lg:h-[auto] object-cover"
+                alt="Hero Section Image" />
+
+            <!-- Overlay hitam transparan -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Konten di atas gambar -->
+            <div
+                class="absolute bottom-0 flex flex-col justify-center items-center w-full py-10 py-14 md:py-16 lg:py-20">
+                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                    <!-- Garis kiri -->
+                    <div class="hidden md:block w-full bg-[var(--color-primary)] h-[3px]"></div>
+
+                    <!-- Teks Tengah -->
+                    <div
+                        class="flex flex-col justify-center max-w-[300px] md:min-w-[530px] lg:min-w-[530px] mx-0 md:mx-10 lg:mx-20 text-center">
+                        <p
+                            class="text-[var(--color-accent)] text-xs text-sm md:text-base font-semibold pb-2 md:pb-5 text-montserrat">
+                            About Us > Home
+                        </p>
+                        <h1 class="text-white text-3xl md:text-5xl lg:text-7xl uppercase font-bold text-headings">
+                            About Us
+                        </h1>
+                        <p class="text-white text-xs text-sm md:text-lg mt-2 md:mt-4 text-montserrat">
+                            Welcome to Hotel Liv Lovina, where comfort and Balinese charm come
+                            together in the heart of North Bali.
+                        </p>
+                    </div>
+
+                    <!-- Garis kanan -->
+                    <div class="hidden md:block w-full bg-[var(--color-primary)] h-[3px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE SLIDER -->
+    <section class="mt-2 md:mt-4 lg:mt-8">
+        <div id="slider"
+            class="flex gap-2 md:gap-5 lg:gap-10 px-5 lg:px-10 overflow-x-auto scroll-smooth snap-x snap-mandatory w-full no-scrollbar">
+            <div
+                class="snap-center shrink-0 w-full md:max-w-[600px] md:max-h-[400px] lg:max-w-[800px] lg:max-h-[450px] overflow-hidden">
+                <img src="assets/images/abt1.png" class="w-full h-full object-cover" />
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-full md:max-w-[600px] md:max-h-[400px] lg:max-w-[800px] lg:max-h-[450px] overflow-hidden">
+                <img src="assets/images/abt1.png" class="w-full h-full object-cover" />
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-full md:max-w-[600px] md:max-h-[400px] lg:max-w-[800px] lg:max-h-[450px] overflow-hidden">
+                <img src="assets/images/abt1.png" class="w-full h-full object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT LIV LOVINA HOTEL -->
+    <section class="mt-10 md:mt-20 lg:mt-30 px-5 md:px-15 lg:px-30">
+        <div class="flex flex-col">
+            <span class="text-xl md:text-3xl mb-3 text-[var(--color-accent)] text-inter font-semibold pb-2">About
+                Us</span>
+            <h1 class="text-4xl md:text-6xl uppercase text-gray-800 mb-3" style="font-family: var(--font-heading);">LIV
+                LOVINA HOTEL
+            </h1>
+            <p class="font-semibold text-lg md:text-xl lg:text-2xl text-gray-800"
+                style="font-family: var(--font-montserrat);">
+                Welcome to Hotel Liv Lovina, your perfect gateway to discover the beauty of North Bali. Nestled in the
+                center of the region’s tourism area, our hotel is surrounded by some of the island’s most popular
+                attractions, including the tranquil Lovina Beach, the lush Sambangan Waterfalls, and many other cultural
+                and natural destinations.
+                <br>
+                <br>
+                At Hotel Liv Lovina, we strive to provide not just accommodation, but a complete experience. Our modern
+                design blends comfort and functionality, offering well-appointed rooms, relaxing public spaces, and
+                thoughtful facilities to meet the needs of every traveler. Whether you are here for leisure, adventure,
+                or a family getaway, our team is dedicated to delivering warm hospitality and personalized service.
+                <br>
+                <br>
+                With a commitment to affordability without compromising quality, Hotel Liv Lovina ensures that guests
+                can enjoy modern facilities, a strategic location, and an unforgettable stay in North Bali.
+            </p>
+        </div>
+
+        <div class="w-full">
+            <div
+                class="pb-20 mt-15 flex flex-col md:flex-row justify-between items-center md:items-end w-full gap-4 md:gap-2">
+                <div class="flex flex-col">
+                    <div class="flex justify-center gap-1 md:gap-5 mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                    </div>
+                    <div class="py-3 px-7 flex gap-5 items-center shadow-lg rounded-xl">
+                        <div
+                            class="flex flex-col justify-center gap-2 py-5 px-7 bg-[var(--color-primary)] rounded-full text-white w-fit">
+                            <div class="flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 48 48">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M31.681 34.887c-1.915 1.29-4.358 2.072-7.251 2.072c-5.59 0-10.34-3.773-12.04-8.854v-.02c-.43-1.29-.684-2.658-.684-4.085s.254-2.795.684-4.085c1.7-5.082 6.45-8.854 12.04-8.854c3.166 0 5.98 1.094 8.229 3.205l6.156-6.156C35.082 4.63 30.235 2.5 24.43 2.5c-8.405 0-15.656 4.828-19.194 11.864C3.77 17.257 2.93 20.521 2.93 24s.84 6.743 2.306 9.636v.02C8.774 40.671 16.026 45.5 24.43 45.5c5.805 0 10.672-1.915 14.229-5.2c4.066-3.752 6.41-9.264 6.41-15.811c0-1.525-.136-2.99-.39-4.398h-20.25v8.326h11.572c-.508 2.678-2.033 4.945-4.32 6.47"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-width="1.5"
+                                        d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-width="1.5"
+                                        d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-width="1.5"
+                                        d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-xl md:text-2xl" style="font-family: var(--font-heading);">Rating based on
+                                1100+ reviews
+                            </h3>
+                            <span class="text-lg font-semibold text-gray-600"
+                                style="font-family: var(--font-montserrat);">Google Reviews</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="javascript:void(0)"
+                        class="px-25 md:px-18 py-6 md:py-6 uppercase text-xl md:text-2xl text-white font-bold bg-[var(--color-primary)] hover:bg-[var(--color-hover)] duration-300 transition-all rounded-3xl border-4 border-white shadow-sm">
+                        BOOK&nbsp;NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="px-5 sm:px-10">
+        <div class="bg-[var(--color-primary)] py-10 px-3 sm:px-10 md:px-20 rounded-t-[40px] md:rounded-t-[70px]">
+            <!-- TITLE SECTION -->
+            <div class="flex flex-col items-center mb-8">
+                <div class="flex items-center w-full justify-center mb-5 px-4 sm:px-10">
+                    <div class="bg-white h-[1px] flex-1"></div>
+                    <div class="flex items-center mx-5 sm:mx-10">
+                        <span class="text-[var(--color-accent)] text-lg sm:text-xl"
+                            style="font-family: var(--font-inter);">Why&nbsp;Choose&nbsp;Us</span>
+                    </div>
+                    <div class="bg-white h-[1px] flex-1"></div>
+                </div>
+                <h1 class="text-center uppercase text-3xl sm:text-4xl md:text-5xl text-white"
+                    style="font-family: var(--font-heading);">
+                    LIV LOVINA HOTEL
+                </h1>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="flex flex-col gap-10 mt-10">
+
+                <!-- ITEM 1 -->
+                <div class="flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
+                    <span class="py-5 px-5 bg-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 16 16">
+                            <path fill="#4a81f9" fill-rule="evenodd"
+                                d="m7.539 14.841l.003.003l.002.002a.755.755 0 0 0 .912 0l.002-.002l.003-.003l.012-.009a6 6 0 0 0 .19-.153a15.6 15.6 0 0 0 2.046-2.082C11.81 11.235 13 9.255 13 7A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.6 15.6 0 0 0 2.046 2.082l.189.153zM8 8.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="flex flex-col max-w-2xl">
+                        <h1 class="text-2xl text-white uppercase" style="font-family: var(--font-heading);">
+                            STRATEGIC LOCATION
+                        </h1>
+                        <p class="text-[#EAEAEA]" style="font-family: var(--font-montserrat);">
+                            Designed with a contemporary style, offering cozy rooms and well-equipped facilities for a
+                            relaxing stay.
+                        </p>
+                    </span>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="flex flex-col md:flex-row-reverse gap-5 items-center text-center md:text-right">
+                    <span class="py-5 px-5 bg-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#4a81f9"
+                                d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25" />
+                        </svg>
+                    </span>
+                    <span class="flex flex-col max-w-2xl">
+                        <h1 class="text-2xl text-white uppercase" style="font-family: var(--font-heading);">
+                            MODERN COMFORT
+                        </h1>
+                        <p class="text-[#EAEAEA]" style="font-family: var(--font-montserrat);">
+                            Situated in the heart of North Bali's tourism center, close to Lovina Beach,
+                            Sambangan Waterfalls, and other cultural attractions.
+                        </p>
+                    </span>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
+                    <span class="py-5 px-5 bg-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 48 48">
+                            <defs>
+                                <mask id="SVGKkdZ2csA">
+                                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                        <path fill="#fff" stroke="#fff"
+                                            d="m24 4l5.253 3.832l6.503-.012l1.997 6.188l5.268 3.812L41 24l2.021 6.18l-5.268 3.812l-1.997 6.188l-6.503-.012L24 44l-5.253-3.832l-6.503.012l-1.997-6.188l-5.268-3.812L7 24l-2.021-6.18l5.268-3.812l1.997-6.188l6.503.012z" />
+                                        <path stroke="#000" d="m17 24l5 5l10-10" />
+                                    </g>
+                                </mask>
+                            </defs>
+                            <path fill="#4a81f9" d="M0 0h48v48H0z" mask="url(#SVGKkdZ2csA)" />
+                        </svg>
+                    </span>
+                    <span class="flex flex-col max-w-2xl">
+                        <h1 class="text-2xl text-white uppercase" style="font-family: var(--font-heading);">
+                            COMPLETE FACILITIES
+                        </h1>
+                        <p class="text-[#EAEAEA]" style="font-family: var(--font-montserrat);">
+                            From comfortable rooms to supporting amenities, everything you need is provided to ensure
+                            convenience during your holiday.
+                        </p>
+                    </span>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="flex flex-col md:flex-row-reverse gap-5 items-center text-center md:text-right">
+                    <span class="py-5 px-5 bg-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path fill="#4a81f9" fill-rule="evenodd"
+                                d="m16.137 4.728l1.83 1.83C20.656 9.248 22 10.592 22 12.262c0 1.671-1.344 3.015-4.033 5.704c-2.69 2.69-4.034 4.034-5.705 4.034c-1.67 0-3.015-1.344-5.704-4.033l-1.83-1.83c-1.545-1.546-2.318-2.318-2.605-3.321c-.288-1.003-.042-2.068.45-4.197l.283-1.228c.413-1.792.62-2.688 1.233-3.302s1.51-.82 3.302-1.233l1.228-.284c2.13-.491 3.194-.737 4.197-.45c1.003.288 1.775 1.061 3.32 2.606m-4.99 9.6c-.673-.672-.668-1.638-.265-2.403a.75.75 0 0 1 1.04-1.046c.34-.18.713-.276 1.085-.272a.75.75 0 0 1-.014 1.5a.88.88 0 0 0-.609.277c-.387.387-.286.775-.177.884c.11.109.497.21.884-.177c.784-.784 2.138-1.044 3.005-.177c.673.673.668 1.639.265 2.404a.75.75 0 0 1-1.04 1.045a2.2 2.2 0 0 1-1.472.232a.75.75 0 1 1 .302-1.47c.177.037.463-.021.708-.266c.387-.388.286-.775.177-.884c-.11-.109-.497-.21-.884.177c-.784.784-2.138 1.044-3.005.176m-1.126-4.035a2 2 0 1 0-2.829-2.828a2 2 0 0 0 2.829 2.828"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="flex flex-col max-w-2xl">
+                        <h1 class="text-2xl text-white uppercase" style="font-family: var(--font-heading);">
+                            AFFORDABLE PRICE
+                        </h1>
+                        <p class="text-[#EAEAEA]" style="font-family: var(--font-montserrat);">
+                            Enjoy a pleasant stay with modern standards at prices that remain budget-friendly.
+                        </p>
+                    </span>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div class="flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
+                    <span class="py-5 px-5 bg-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 576 512">
+                            <path fill="#4a81f9"
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1c-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2c-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24" />
+                        </svg>
+                    </span>
+                    <span class="flex flex-col max-w-2xl">
+                        <h1 class="text-2xl text-white uppercase" style="font-family: var(--font-heading);">
+                            WARM HOSPITALITY
+                        </h1>
+                        <p class="text-[#EAEAEA]" style="font-family: var(--font-montserrat);">
+                            Dedicated staff ready to provide friendly, attentive, and personalized service for every
+                            guest.
+                        </p>
+                    </span>
+                </div>
+
+                <!-- ITEM 6 -->
+                <div class="flex flex-col md:flex-row-reverse gap-5 items-center text-center md:text-right">
+                    <span class="py-5 px-5 bg-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 512 512">
+                            <path fill="#4a81f9"
+                                d="M80 160c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V192c0-17.7 14.3-32 32-32zM270.6 16c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L288 160h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V198.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3" />
+                        </svg>
+                    </span>
+                    <span class="flex flex-col max-w-2xl">
+                        <h1 class="text-2xl text-white uppercase" style="font-family: var(--font-heading);">
+                            IDEAL FOR ALL TRAVELERS
+                        </h1>
+                        <p class="text-[#EAEAEA]" style="font-family: var(--font-montserrat);">
+                            Perfect for family vacations, romantic getaways, or adventurous trips exploring North Bali.
+                        </p>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- YOUTUBE EMBED VIDEO -->
+    <section class="mt-10 md:mt-20 px-5 md:px-15">
+        <div class="w-full flex flex-col justify-center items-center mb-15">
+            <div class="max-w-4xl">
+                <p class="text-center capitalize text-[var(--color-accent)] text-2xl mb-4 font-semibold">Our Rooms</p>
+                <h1 class="text-center uppercase text-3xl md:text-4xl mb-3" style="font-family: var(--font-heading);">
+                    experience
+                    hotels in
+                    liv lovina</h1>
+                <p class="text-center text-lg md:text-lg font-semibold text-[#1E1E1E]"
+                    style="font-family: var(--font-montserrat);">Discover the charm of North Bali through our video
+                    showcase. From the modern comfort
+                    of Hotel Liv Lovina to the nearby attractions like Lovina Beach and Sambangan Waterfalls, see how we
+                    bring together convenience, relaxation, and affordability — all in one unforgettable stay.</p>
+            </div>
+        </div>
+
+        <div class="relative w-full overflow-hidden rounded-3xl shadow-lg max-w-7xl max-h-[600px] mx-auto aspect-video">
+            <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/XgpRBmfU9gY?si=K-P4RVaBy2oTz5L-" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+    </section>
+
+    <!-- ACCOMMODATIONS -->
+    <section
+        class="mt-15 bg-[var(--color-primary)] flex flex-col items-center justify-center py-10 md:py-16 overflow-x-hidden">
+        <div class="text-center text-white mb-8 w-full px-4">
+            <div class="flex items-center justify-center mb-3">
+                <div class="w-1/4 md:w-1/3 h-[1px] bg-white"></div>
+                <p class="text-xs md:text-sm tracking-widest font-semibold mx-3 md:mx-6"
+                    style="margin-bottom: 0; font-family: var(--font-montserrat);">
+                    LIV&nbsp;LOVINA&nbsp;HOTEL
+                </p>
+                <div class="w-1/4 md:w-1/3 h-[1px] bg-white"></div>
+            </div>
+            <h1 class="text-2xl md:text-4xl" style="font-family: var(--font-heading);">ACCOMMODATIONS</h1>
+        </div>
+
+        <div class="relative w-[90%] md:w-3/4">
+            <div id="slider-rooms" class="flex transition-transform duration-700 ease-in-out gap-6 md:gap-10 mb-10">
+                <div class="min-w-full flex flex-col items-center text-center text-white relative">
+                    <img src="assets/images/abt1.png" alt="Deluxe Room"
+                        class="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover" />
+                    <div class="absolute bottom-8 md:bottom-14 text-center w-full">
+                        <h2 class="text-lg md:text-2xl font-bold">DELUXE ROOM</h2>
+                        <p class="text-xs md:text-sm mt-1">Perfect for a simple and budget-friendly stay.</p>
+                    </div>
+                </div>
+
+                <div class="min-w-full flex flex-col items-center text-center text-white relative">
+                    <img src="assets/images/abt1.png" alt="Suite Room"
+                        class="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover" />
+                    <div class="absolute bottom-8 md:bottom-14 text-center w-full">
+                        <h2 class="text-lg md:text-2xl font-bold">SUITE ROOM</h2>
+                        <p class="text-xs md:text-sm mt-1">Spacious room with premium facilities.</p>
+                    </div>
+                </div>
+
+                <div class="min-w-full flex flex-col items-center text-center text-white relative">
+                    <img src="assets/images/abt1.png" alt="Executive Room"
+                        class="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover" />
+                    <div class="absolute bottom-8 md:bottom-14 text-center w-full">
+                        <h2 class="text-lg md:text-2xl font-bold">EXECUTIVE ROOM</h2>
+                        <p class="text-xs md:text-sm mt-1">Enjoy comfort with upgraded amenities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="absolute bottom-2 md:bottom-0 left-1/2 -translate-x-1/2 flex items-center space-x-4 md:space-x-6">
+                <button id="prevBtn" class="text-white hover:text-gray-300 transition cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <div id="indicators" class="flex space-x-2">
+                    <span class="w-2.5 h-2.5 md:w-3 md:h-3 cursor-pointer bg-white rounded-full opacity-70"></span>
+                    <span class="w-2.5 h-2.5 md:w-3 md:h-3 cursor-pointer bg-white/40 rounded-full opacity-70"></span>
+                    <span class="w-2.5 h-2.5 md:w-3 md:h-3 cursor-pointer bg-white/40 rounded-full opacity-70"></span>
+                </div>
+
+                <button id="nextBtn" class="text-white hover:text-gray-300 transition cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLORE DESTINATIONS CARD -->
+    <section class="mt-15 md:mt-20 px-5 md:px-15 lg:px-25">
+        <div class="flex flex-col md:flex-row lg:flex-end justify-between">
+            <div class="">
+                <p class="mb-3 text-[var(--color-accent)] capitalize text-lg md:text-xl font-medium"
+                    style="font-family: var(--font-inter);">
+                    Our Destinations
+                </p>
+                <h1 class="text-3xl md:text-4xl uppercase" style="font-family: var(--font-heading);">explore north bali
+                    <br>
+                    destination
+                </h1>
+            </div>
+            <div class="flex justify-center items-end">
+                <div class="flex items-center justify-center">
+                    <a href="javascript:void(0)"
+                        class="px-25 py-4 bg-[var(--color-primary)] hover:bg-[var(--color-hover)] duration-300 transition-all text-lg md:text-2xl text-white rounded-2xl font-bold border-4 border-white shadow-sm"
+                        style="font-family: var(--font-inter);">BOOK&nbsp;NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5 md:mb-13 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-7">
+            <div class="relative min-h-[550px]">
+                <img src="assets/images/lovina-dolphin.jpg" alt="Destination 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/25"></div>
+                <div class="absolute bottom-4 text-white w-full">
+                    <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+                        style="font-family: var(--font-montserrat);">watching dolphin</h2>
+                    <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Lovina
+                        Beach</p>
+                </div>
+            </div>
+
+
+            <div class="relative min-h-[550px]">
+                <img src="assets/images/lovina-dolphin.jpg" alt="Destination 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/25"></div>
+                <div class="absolute bottom-4 text-white w-full">
+                    <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+                        style="font-family: var(--font-montserrat);">swimming dolphin</h2>
+                    <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Lovina
+                        Beach</p>
+                </div>
+            </div>
+
+            <div class="relative min-h-[550px]">
+                <img src="assets/images/lovina-dolphin.jpg" alt="Destination 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/25"></div>
+                <div class="absolute bottom-4 text-white w-full">
+                    <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+                        style="font-family: var(--font-montserrat);">snorkeling</h2>
+                    <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Lovina
+                        Beach</p>
+                </div>
+            </div>
+
+            <div class="relative min-h-[550px]">
+                <img src="assets/images/lovina-dolphin.jpg" alt="Destination 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/25"></div>
+                <div class="absolute bottom-4 text-white w-full">
+                    <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+                        style="font-family: var(--font-montserrat);">blue <br> lagoon</h2>
+                    <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Sambangan
+                        Village</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <p class="w-full text-center text-sm md:text-xl lg:text-xl font-medium md:px-15 lg:px-50 text-[#1E1E1E]"
+                style="font-family: var(--font-montserrat);">
+                From the calm waves of Lovina Beach to the refreshing beauty of Sambangan Waterfalls and other hidden
+                gems, discover the best attractions just moments away from Hotel Liv Lovina. Let us guide you to
+                experience the culture, nature, and adventure that make North Bali truly unforgettable.
+            </p>
+        </div>
+    </section>
+
+    <!-- COMMENTS -->
+    <section
+        class=" md:mt-10 flex flex-col md:flex-row items-center justify-between w-full mx-auto py-16 px-6 md:px-10 lg:px-10 gap-10">
+
+        <!-- LEFT SIDE: STACKED IMAGES -->
+        <div class="relative w-full md:w-1/2 flex justify-center">
+            <!-- Back image (shadowed & rotated) -->
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                alt="Background Guest Image"
+                class="absolute top-5 left-5 md:left-13 lg:left-28 w-[90%] md:w-[90%] lg:w-[80%] h-[600px] md:h-[700px] lg:h-[650px] object-cover rounded-[30px] shadow-xl opacity-60" />
+
+            <!-- Front image -->
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                alt="Front Guest Image"
+                class="relative z-10 w-[100%] md:w-[95%] lg:w-[85%] h-[600px] md:h-[700px] lg:h-[650px] object-cover rounded-[30px] shadow-2xl" />
+        </div>
+
+
+        <!-- RIGHT SIDE: CONTENT -->
+        <div class="w-full md:w-1/2 flex flex-col items-start text-left space-y-6">
+            <!-- Section heading -->
+            <div>
+                <p class="text-xl md:text-2xl text-yellow-500 mb-5 font-medium" style="font-family: var(--font-inter);">
+                    Our Testimoni</p>
+                <h2 class="text-3xl md:text-4xl mb-4" style="font-family: var(--font-heading);">
+                    WHAT OUR GUEST SAY?
+                </h2>
+                <p class="font-medium text-md md:text-lg text-[#1E1E1E] leading-relaxed max-w-xl"
+                    style="font-family: var(--font-montserrat);">
+                    Hear directly from our happy guests about their experiences at Hotel Liv Lovina. From our modern
+                    facilities and
+                    warm hospitality to the strategic location near North Bali’s top attractions, discover why travelers
+                    choose us
+                    for a memorable and affordable stay.
+                </p>
+            </div>
+
+            <!-- Slider -->
+            <div class="relative w-full mt-6 overflow-hidden">
+                <div id="slider-comments" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Comment 1 -->
+                    <div class="min-w-full flex flex-col bg-white p-6 text-gray-800">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <h3 class="font-bold text-lg" style="font-family: var(--font-montserrat);">Mr. Egolo
+                                </h3>
+                                <p class="text-sm text-gray-500">2024-12-09</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 mb-2">
+                            <span class="text-3xl">★★★★★</span>
+                        </div>
+                        <p class="text-md font-medium text-gray-700 leading-relaxed"
+                            style="font-family: var(--font-montserrat);">
+                            This place is definition of 5 star in Ubud Jungle. Thank you to the team who should be very
+                            proud of themselves,
+                            every one of the staff are extremely helpful and always happy to address.
+                        </p>
+                    </div>
+
+                    <!-- Comment 2 -->
+                    <div class="min-w-full flex flex-col bg-white p-6 text-gray-800">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <h3 class="font-bold text-lg" style="font-family: var(--font-montserrat);">Ms. Clara
+                                </h3>
+                                <p class="text-sm text-gray-500">2024-10-02</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 mb-2">
+                            <span class="text-3xl">★★★★★</span>
+                        </div>
+                        <p class="text-md font-medium text-gray-700 leading-relaxed"
+                            style="font-family: var(--font-montserrat);">
+                            Such a cozy and peaceful place! I really enjoyed the scenery and the staff were very kind
+                            and helpful.
+                        </p>
+                    </div>
+
+                    <!-- Comment 3 -->
+                    <div class="min-w-full flex flex-col bg-white p-6 text-gray-800">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <h3 class="font-bold text-lg" style="font-family: var(--font-montserrat);">Mr. Johan
+                                </h3>
+                                <p class="text-sm text-gray-500">2024-09-15</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 mb-2">
+                            <span class="text-3xl">★★★★★</span>
+                        </div>
+                        <p class="text-md font-medium text-gray-700 leading-relaxed"
+                            style="font-family: var(--font-montserrat);">
+                            Amazing experience! The breakfast was delicious and the rooms were super clean. Definitely
+                            recommended!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Controls & indicators -->
+                <div class="mt-5 flex justify-center items-center space-x-4">
+                    <!-- Left button -->
+                    <button id="prevCommentBtn" class="cursor-pointer text-gray-700 hover:text-gray-900 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div id="commentIndicators" class="flex space-x-2">
+                        <span class="w-3 h-3 bg-blue-400 cursor-pointer rounded-full opacity-80"></span>
+                        <span class="w-3 h-3 bg-gray-300 cursor-pointer rounded-full opacity-70"></span>
+                        <span class="w-3 h-3 bg-gray-300 cursor-pointer rounded-full opacity-70"></span>
+                    </div>
+
+                    <!-- Right button -->
+                    <button id="nextCommentBtn" class="cursor-pointer text-gray-700 hover:text-gray-900 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK NOW -->
+    <section
+        class="relative w-full h-fit py-20 md:py-0 md:h-[60vh] h-[100vh] flex items-center justify-center bg-cover bg-center lg:mt-20"
+        style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80');">
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 text-center text-white w-full">
+            <p class="text-[#FBBF24] font-semibold mb-3 text-sm md:text-base"
+                style="font-family: var(--font-montserrat);">
+                About Us > Home
+            </p>
+
+            <div class="flex items-center justify-center w-full">
+                <div class="bg-white w-full h-[1px]"></div>
+                <div class="flex items-center min-w-fit mx-10">
+                    <h1 class="text-2xl md:text-5xl" style="font-family: var(--font-heading);">
+                        BOOK YOUR STAY NOW!
+                    </h1>
+                </div>
+                <div class="bg-white w-full h-[1px]"></div>
+            </div>
+
+            <p class="text-lg md:text-lg leading-relaxed mb-8 w-2/3 md:w-2/4 text-center mx-auto"
+                style="font-family: var(--font-montserrat);">
+                Secure your unforgettable getaway at Hotel Liv Lovina today. With modern facilities, complete amenities,
+                and a prime location near Lovina Beach and Sambangan Waterfalls, our rooms are the perfect choice for
+                your
+                North Bali adventure. Don’t wait — reserve your spot and experience comfort at an affordable price!
+            </p>
+
+            <a href="javascript:void(0)"
+                class="bg-[var(--color-primary)] hover:bg-[var(--color-hover)] text-white font-semibold py-3 px-15 border-3 border-white rounded-full shadow-lg transition-all duration-300 ease-in-out"
+                style="font-family: var(--font-inter);">
+                BOOK&nbsp;NOW
+            </a>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center md:text-left mb-10">
+            <h4 class="text-yellow-500 font-medium mb-7 text-2xl" style="font-family: var(--font-inter);">Our Galery
+            </h4>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4" style="font-family: var(--font-heading);">EXPLORE OUR
+                GALERY</h2>
+            <p class="font-medium text-lg text-[#1E1E1E] max-w-2xl" style="font-family: var(--font-montserrat);">
+                Take a closer look at Hotel Liv Lovina through our photo and video gallery.
+                From modern rooms and cozy facilities to the surrounding beauty of North Bali,
+                discover the atmosphere that makes every stay memorable.
+            </p>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80"
+                alt="gallery1" class="object-cover w-full h-72 md:h-80">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80"
+                alt="gallery2" class="object-cover w-full h-72 md:h-80">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                alt="gallery3" class="object-cover w-full h-72 md:h-80">
+
+            <div class="flex flex-col justify-center col-span-2 md:col-span-2 px-4">
+                <p class="text-[#1E1E1E] text-lg font-medium" style="font-family: var(--font-montserrat);">
+                    Enjoy a relaxing stay with modern rooms and tropical villas designed for every need.
+                </p>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                alt="gallery3" class="object-cover w-full h-72 md:h-80">
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-6 lg:gap-4 mt-4">
+            <div class="w-full mb-3 lg:mb-0">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                    alt="gallery3" class="object-cover w-full h-72 md:h-80">
+            </div>
+
+            <div class="col-span-2 hidden md:block"></div>
+
+            <div class="col-span-2 grid grid-cols-2 gap-4 w-full">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                    alt="gallery3" class="object-cover w-full h-72 md:h-80">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                    alt="gallery3" class="object-cover w-full h-72 md:h-80">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[var(--color-primary)] text-white py-10 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Logo & Social Icons -->
+            <div>
+                <img src="assets/images/logo.png" alt="Logo" class="w-65 mb-6">
+                <div class="flex space-x-4">
+                    <a href="javascript:void(0)"
+                        class="border border-white rounded-full p-2 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="border border-white rounded-full p-2 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M17 3.5a.5.5 0 0 0-.5-.5H14a4.77 4.77 0 0 0-5 4.5v2.7H6.5a.5.5 0 0 0-.5.5v2.6a.5.5 0 0 0 .5.5H9v6.7a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6.7h2.62a.5.5 0 0 0 .49-.37l.72-2.6a.5.5 0 0 0-.48-.63H13V7.5a1 1 0 0 1 1-.9h2.5a.5.5 0 0 0 .5-.5Z" />
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="border border-white rounded-full p-2 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-inter);">CONTACT INFORMATION</h3>
+                <p class="text-gray-300 leading-relaxed mb-2" style="font-family: var(inter);">
+                    Jl. Seririt - Singaraja Pemaron,<br>
+                    Kabupaten Buleleng, Bali 81119
+                </p>
+                <p class="text-gray-300 mb-1" style="font-family: var(inter);">info@livlovinahotel.com</p>
+                <p class="text-gray-300" style="font-family: var(inter);">+62 858 6996 7777</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div>
+                <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-inter);">CONTACT INFORMATION</h3>
+                <ul class="space-y-1 text-gray-300">
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Home</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">About Us</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Rooms</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Gallery</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Blog</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="max-w-7xl mx-auto mt-10 border-t border-white/60 pt-4 text-center md:text-left">
+            <p class="text-gray-200 text-sm">
+                © Copyright 2025 <span class="font-bold text-white">Liv Lovina Hotel</span>. All Rights Reserved.
+                Powered By
+                <span class="font-bold text-white">A1GO BALI</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+
+    <!-- JS IMAGE SLIDER -->
+    <script>
+        window.addEventListener("load", () => {
+            const slider = document.getElementById("slider");
+            const middleSlide = slider.children[1];
+            const offset = middleSlide.offsetLeft - (slider.clientWidth / 2) + (middleSlide.clientWidth / 2);
+            slider.scrollTo({ left: offset, behavior: "smooth" });
+        });
+    </script>
+
+    <!-- JS ACCOMMODATIONS SLIDER -->
+    <script>
+        (function () {
+            const slider = document.getElementById('slider-rooms');
+            const indicators = document.querySelectorAll('#indicators span');
+            if (!slider) return;
+
+            const slides = Array.from(slider.children);
+            const total = slides.length;
+            let currentIndex = 0;
+            let slideWidth = 0;
+            let gapPx = 0;
+            let autoSlideTimer = null;
+
+            // utility: convert gap string (px/rem/em) to px
+            function gapToPx(gapStr, el) {
+                if (!gapStr) return 0;
+                const rootFont = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+                if (gapStr.endsWith('px')) return parseFloat(gapStr);
+                if (gapStr.endsWith('rem')) return parseFloat(gapStr) * rootFont;
+                if (gapStr.endsWith('em')) return parseFloat(gapStr) * (parseFloat(getComputedStyle(el).fontSize) || rootFont);
+                // fallback
+                return parseFloat(gapStr) || 0;
+            }
+
+            function calcSizes() {
+                // slideWidth = width of one slide (includes padding inside slide but NOT gap)
+                slideWidth = slides[0].getBoundingClientRect().width;
+                const gapStr = getComputedStyle(slider).gap || getComputedStyle(slider)['column-gap'] || '0px';
+                gapPx = gapToPx(gapStr, slider);
+            }
+
+            function updateIndicators() {
+                indicators.forEach((dot, i) => {
+                    dot.classList.toggle('bg-white', i === currentIndex);
+                    dot.classList.toggle('bg-white/40', i !== currentIndex);
+                });
+            }
+
+            function updateSlider(animate = true) {
+                // Calculate offset in px: currentIndex * (slideWidth + gap)
+                const offset = currentIndex * (slideWidth + gapPx);
+                // optional: toggle transition for nicer UX (kept via class in your HTML)
+                if (!animate) slider.style.transition = 'none';
+                else slider.style.transition = ''; // let Tailwind CSS rule handle it
+                slider.style.transform = `translateX(-${offset}px)`;
+                // restore transition if disabled
+                if (!animate) {
+                    // force reflow then restore transition
+                    void slider.offsetWidth;
+                    slider.style.transition = '';
+                }
+                updateIndicators();
+            }
+
+            // Next / Prev handlers
+            function next() {
+                currentIndex = (currentIndex + 1) % total;
+                updateSlider();
+            }
+            function prev() {
+                currentIndex = (currentIndex - 1 + total) % total;
+                updateSlider();
+            }
+
+            // Hook up buttons
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            if (nextBtn) nextBtn.addEventListener('click', () => { next(); restartAuto(); });
+            if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restartAuto(); });
+
+            // Indicators clickable
+            indicators.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateSlider();
+                    restartAuto();
+                });
+            });
+
+            // Auto slide
+            function startAuto() {
+                stopAuto();
+                autoSlideTimer = setInterval(() => { next(); }, 5000);
+            }
+            function stopAuto() {
+                if (autoSlideTimer) { clearInterval(autoSlideTimer); autoSlideTimer = null; }
+            }
+            function restartAuto() { stopAuto(); startAuto(); }
+
+            // Recalculate sizes on load & resize & when images finish loading
+            function init() {
+                calcSizes();
+                updateSlider(false);
+                updateIndicators();
+                startAuto();
+            }
+
+            // wait for images to load — ensures widths computed correctly
+            if (document.readyState === 'complete') {
+                // in case already loaded
+                init();
+            } else {
+                window.addEventListener('load', init, { once: true });
+            }
+            window.addEventListener('resize', () => {
+                // recompute sizes and reposition without animation for smoothness
+                const prevIndex = currentIndex;
+                calcSizes();
+                // ensure current index bounds
+                if (currentIndex >= total) currentIndex = total - 1;
+                updateSlider(false);
+            });
+
+            // optional: pause on hover / resume
+            const parent = slider.parentElement;
+            if (parent) {
+                parent.addEventListener('mouseenter', stopAuto);
+                parent.addEventListener('mouseleave', startAuto);
+            }
+        })();
+    </script>
+
+    <!-- JS COMMENTS SLIDER -->
+    <script>
+        const sliderComments = document.getElementById('slider-comments');
+        const commentIndicators = document.querySelectorAll('#commentIndicators span');
+        const prevCommentBtn = document.getElementById('prevCommentBtn');
+        const nextCommentBtn = document.getElementById('nextCommentBtn');
+        let commentIndex = 0;
+
+        function updateCommentSlider() {
+            sliderComments.style.transform = `translateX(-${commentIndex * 100}%)`;
+            commentIndicators.forEach((dot, i) => {
+                dot.classList.toggle('bg-blue-400', i === commentIndex);
+                dot.classList.toggle('bg-gray-300', i !== commentIndex);
+            });
+        }
+
+        nextCommentBtn.addEventListener('click', () => {
+            commentIndex = (commentIndex + 1) % 3;
+            updateCommentSlider();
+        });
+
+        prevCommentBtn.addEventListener('click', () => {
+            commentIndex = (commentIndex - 1 + 3) % 3;
+            updateCommentSlider();
+        });
+    </script>
+
+</body>
+
+</html>
