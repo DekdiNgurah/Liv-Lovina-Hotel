@@ -19,15 +19,15 @@
     --color-disabled: #9CA3AF;
 }
 
-.font-inter {
+.text-inter {
     font-family: var(--font-inter);
 }
 
-.font-montserrat {
+.text-montserrat {
     font-family: var(--font-montserrat);
 }
 
-.font-heading {
+.text-alkalami {
     font-family: var(--font-heading);
 }
 
