@@ -7,12 +7,111 @@
     <title>Our Blog</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+
 
 
 </head>
 
 <body>
     <section class="blog">
+        <nav class="w-full h-0">
+            <div id="navbar"
+                class="w-full bg-white lg:bg-transparent fixed top-0 left-0 z-50 transition-transform duration-500 ease-in-out  md:px-10 lg:px-15 xl:px-15 2xl:px-15">
+                <div
+                    class="navbar flex justify-between items-center px-4 md:px-0 lg:px-0 xl:px-0 2xl:px-0 py-3 md:py-4 lg:py-4 xl:py-4 2xl:py-4">
+
+                    <div class="hamburger lg:hidden">
+                        <input id="menu-toggle" class="checkbox" type="checkbox" />
+                        <svg fill="none" viewBox="0 0 46 50" height="40" width="40">
+                            <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black"
+                                d="M6 11L44 11" />
+                            <path class="lineMid line" stroke-linecap="round" stroke-width="4" stroke="black"
+                                d="M6 24H43" />
+                            <path class="lineBottom line" stroke-linecap="round" stroke-width="4" stroke="black"
+                                d="M6 37H43" />
+                        </svg>
+                    </div>
+
+                    <div class="hidden lg:flex flex-1 items-center justify-between lg:py-2 lg:pt-7">
+
+                        <div class="nav-parent w-full lg:px-70">
+                            <ul class="nav-list flex justify-between w-full items-center">
+                                <li class="px-[10px] py-[6px]">
+                                    <a href="index.html">
+                                        <span class="text-xl text-white">
+                                            Home
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="px-[10px] py-[6px] lg:text-sm">
+                                    <a href="about.html">
+                                        <span class="text-xl text-white">
+                                            About&nbsp;us
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="px-[10px] py-[6px]">
+                                    <a href="contact.html">
+                                        <span class="text-xl text-white">
+                                            Rooms
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="px-[10px] py-[6px]">
+                                    <a href="blog.html">
+                                        <span class="text-xl text-white active">
+                                            Blog</span>
+                                    </a>
+                                </li>
+                                <li class="px-[10px] py-[6px]">
+                                    <a href="javascript:void(0)">
+                                        <span class="text-xl text-white">
+                                            Gallery</span>
+                                    </a>
+                                </li>
+                                <li class="px-[10px] py-[6px]">
+                                    <a href="javascript:void(0)">
+                                        <span class="text-xl text-white">
+                                            Contact&nbsp;Us</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="javascript:void(0)">
+                                        <span
+                                            class="text-lg text-uppercase text-white px-7 py-4 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-hover)] duration-300 transition-all cursor-pointer">
+                                            BOOK&nbsp;NOW</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE MENU -->
+                <div id="mobile-menu" class="lg:hidden hidden transition-all duration-900 ease-in-out overflow-hidden">
+                    <ul class="flex flex-col gap-4 py-5 pl-5 md:pl-2">
+                        <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Home</a></li>
+                        <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="block text-gray-700 text-xl md:text-2xl">Rooms</a></li>
+                        <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Blog</a>
+                        </li>
+                        <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Gallery</a>
+                        </li>
+                        <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Contact Us</a>
+                        </li>
+                        <li class="px-7 py-3 rounded-full bg-[var(--color-primary)] w-fit">
+                            <a href="javascript:void(0)"
+                                class="block text-white text-xl md:text-2xl text-uppercase">Book
+                                Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                
+        </nav>
         <!-- HERO SECTION -->
         <section class="blog-hero">
             <div class=" h-lvh">
@@ -642,6 +741,7 @@
             }
         })();
     </script>
+    <script src="script/script.js"></script>
 
 
 </body>

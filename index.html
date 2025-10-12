@@ -6,10 +6,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style/style.css">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 </head>
 
 <body>
+
+
   <section class="home">
+    <!-- NAVBAR -->
+    <nav class="w-full h-0">
+      <div id="navbar"
+        class="w-full bg-white lg:bg-transparent fixed top-0 left-0 z-50 transition-transform duration-500 ease-in-out  md:px-10 lg:px-15 xl:px-15 2xl:px-15">
+        <div
+          class="navbar flex justify-between items-center px-4 md:px-0 lg:px-0 xl:px-0 2xl:px-0 py-3 md:py-4 lg:py-4 xl:py-4 2xl:py-4">
+
+          <div class="hamburger lg:hidden">
+            <input id="menu-toggle" class="checkbox" type="checkbox" />
+            <svg fill="none" viewBox="0 0 46 50" height="40" width="40">
+              <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 11L44 11" />
+              <path class="lineMid line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43" />
+              <path class="lineBottom line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 37H43" />
+            </svg>
+          </div>
+
+          <div class="hidden lg:flex flex-1 items-center justify-between lg:py-2 lg:pt-7">
+
+            <div class="nav-parent w-full lg:px-70">
+              <ul class="nav-list flex justify-between w-full items-center">
+                <li class="px-[10px] py-[6px]">
+                  <a href="index.html">
+                    <span class="text-xl text-white active">
+                      Home
+                    </span>
+                  </a>
+                </li>
+                <li class="px-[10px] py-[6px] lg:text-sm">
+                  <a href="about.html">
+                    <span class="text-xl text-white">
+                      About&nbsp;us
+                    </span>
+                  </a>
+                </li>
+                <li class="px-[10px] py-[6px]">
+                  <a href="contact.html">
+                    <span class="text-xl text-white">
+                      Rooms
+                    </span>
+                  </a>
+                </li>
+                <li class="px-[10px] py-[6px]">
+                  <a href="blog.html">
+                    <span class="text-xl text-white">
+                      Blog</span>
+                  </a>
+                </li>
+                <li class="px-[10px] py-[6px]">
+                  <a href="javascript:void(0)">
+                    <span class="text-xl text-white">
+                      Gallery</span>
+                  </a>
+                </li>
+                <li class="px-[10px] py-[6px]">
+                  <a href="javascript:void(0)">
+                    <span class="text-xl text-white">
+                      Contact&nbsp;Us</span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="javascript:void(0)">
+                    <span
+                      class="text-lg text-uppercase text-white px-7 py-4 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-hover)] duration-300 transition-all cursor-pointer">
+                      BOOK&nbsp;NOW</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="lg:hidden hidden transition-all duration-900 ease-in-out overflow-hidden">
+          <ul class="flex flex-col gap-4 py-5 pl-5 md:pl-2">
+            <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Home</a></li>
+            <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">About Us</a></li>
+            <li><a href="contact.html" class="block text-gray-700 text-xl md:text-2xl">Rooms</a></li>
+            <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Blog</a>
+            </li>
+            <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Gallery</a>
+            </li>
+            <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Contact Us</a>
+            </li>
+            <li class="px-7 py-3 rounded-full bg-[var(--color-primary)] w-fit">
+              <a href="javascript:void(0)" class="block text-white text-xl md:text-2xl text-uppercase">Book
+                Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+          
+    </nav>
     <!-- HERO -->
     <section
       class="hero flex flex-col justify-end items-center bg-[url('assets/images/hero.png')] bg-cover bg-center h-lvh xl:pb-14  lg:pb-16 md:pb-20 sm:pb-24 pb-28">
@@ -33,27 +129,27 @@
           <div id="date-range-picker" date-rangepicker class="flex items-center">
             <div class="relative">
               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-black dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </div>
               <input id="datepicker-range-start" name="start" type="text"
-                class="bg-gray-50 border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Select date start">
+                class="border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 placeholder-gray-900"
+                placeholder="Select date start" style="background-color: transparent;">
             </div>
             <span class="mx-4 text-black text-inter">to</span>
             <div class="relative">
               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-black dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </div>
               <input id="datepicker-range-end" name="end" type="text"
-                class="bg-gray-50 border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 placeholder-gray-900"
                 placeholder="Select date end">
             </div>
           </div>
@@ -61,36 +157,43 @@
         </div>
 
         <form class="">
-          <label for="countries" class="block mb-2 text-inter  text-gray-900 dark:text-white ">Adults(s)</label>
+          <label for="countries" class="block mb-2 text-inter  text-gray-900">Adults(s)</label>
           <select id="countries"
-            class="border-2  w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected>Choose</option>
+            class="border-2 w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+            <option selected disabled>Choose</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="4">4</option>
+            <option value="5">6</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
         </form>
         <form class="">
-          <label for="countries" class="block mb-2 text-inter text-gray-900 dark:text-white ">Children(s)</label>
+          <label for="countries" class="block mb-2 text-inter text-gray-900">Children(s)</label>
           <select id="countries"
-            class="border-2  w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected>Choose</option>
+            class="border-2 w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+            <option selected disabled>Choose</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="4">4</option>
+            <option value="5">6</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
         </form>
-        <button
-          class="bg-[var(--color-primary)] hover:bg-blue-950 text-white text-inter text-[20px] font-bold py-2 px-4 border-2 border-white shadow rounded">
+        <a href="javascript:void(0)"
+          class="bg-[var(--color-primary)] hover:bg-blue-950 text-white text-inter text-[20px] font-bold py-2 px-4 border-2 border-white shadow rounded cursor-pointer transition-all duration-300">
           BOOK NOW
-        </button>
-
-
-
-
+        </a>
       </div>
+
       <div class="experience h-9/12 gap-4 flex flex-col-reverse lg:flex-row justify-between md:p-10 lg:p-20 p-5">
         <div class="des flex flex-col gap-10 lg:w-2/3">
           <div class="title flex flex-col gap-5">
@@ -213,6 +316,8 @@
         <p class="font-medium text-lg text-[#1E1E1E] text-center max-w-2xl"
           style="font-family: var(--font-montserrat);">
           Enjoy a relaxing stay with modern rooms and tropical villas designed for every need.
+          
+
         </p>
       </div>
 
@@ -225,6 +330,9 @@
         <div class="flex flex-col justify-center col-span-2 md:col-span-2 px-4">
           <p class="text-[#1E1E1E] text-lg font-medium" style="font-family: var(--font-montserrat);">
             Enjoy a relaxing stay with modern rooms and tropical villas designed for every need.
+            <br><br><span> <a href="gallery.html" class="flex items-center gap-2">
+               See Gallery<img class="w-8" src="assets/images/arrow-gallery.png" alt="">
+            </a></span>
           </p>
         </div>
 
@@ -569,6 +677,7 @@
       }
     })();
   </script>
+  <script src="script/script.js"></script>
 
 </body>
 
