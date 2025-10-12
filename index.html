@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <section class="home">
+    <!-- HERO -->
+    <section
+      class="hero flex flex-col justify-end items-center bg-[url('assets/images/hero.png')] bg-cover bg-center h-lvh xl:pb-14  lg:pb-16 md:pb-20 sm:pb-24 pb-28">
+      <h2 class="text-headings text-white text-2xl md:text-4xl">
+        SERENE ESCAPE IN LOVINA
+      </h2>
+      <p class="text-montserrat text-white tracking-wide text-center md:text-2xl">Overlooking the calm sea and tropical
+        landscape
+      </p>
+    </section>
+    <!-- DESCRIPTION -->
+    <section class="des flex flex-col ">
+      <div class="booking flex flex-col lg:flex-row items-end justify-center gap-5 p-4">
+        <div class="text flex flex-col items-center">
+          <h5 class="text-inknut font-semibold text-[21px]">Book Now</h5>
+          <p class="text-inter">Best Rate Guarantee</p>
+
+        </div>
+        <div class="date flex flex-col ">
+          <h5 class="text-inter mb-2">Check in - Check out</h5>
+          <div id="date-range-picker" date-rangepicker class="flex items-center">
+            <div class="relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-black dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </div>
+              <input id="datepicker-range-start" name="start" type="text"
+                class="bg-gray-50 border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Select date start">
+            </div>
+            <span class="mx-4 text-black text-inter">to</span>
+            <div class="relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-black dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </div>
+              <input id="datepicker-range-end" name="end" type="text"
+                class="bg-gray-50 border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Select date end">
+            </div>
+          </div>
+
+        </div>
+
+        <form class="">
+          <label for="countries" class="block mb-2 text-inter  text-gray-900 dark:text-white ">Adults(s)</label>
+          <select id="countries"
+            class="border-2  w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected>Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </form>
+        <form class="">
+          <label for="countries" class="block mb-2 text-inter text-gray-900 dark:text-white ">Children(s)</label>
+          <select id="countries"
+            class="border-2  w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected>Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </form>
+        <button
+          class="bg-[var(--color-primary)] hover:bg-blue-950 text-white text-inter text-[20px] font-bold py-2 px-4 border-2 border-white shadow rounded">
+          BOOK NOW
+        </button>
+
+
+
+
+      </div>
+      <div class="experience h-9/12 gap-4 flex flex-col-reverse lg:flex-row justify-between md:p-10 lg:p-20 p-5">
+        <div class="des flex flex-col gap-10 lg:w-2/3">
+          <div class="title flex flex-col gap-5">
+            <p class="text-inter font-bold">EXPERIENCE COASTAL SERENITY</p>
+            <h1 class="text-headings text-3xl lg:text-6xl font-medium">LIV LOVINA HOTEL</h1>
+          </div>
+          <div class="img w-1/1 object-cover lg:w-1/3 flex justify-end">
+            <img src="assets/images/experience.png" class=" object-cover visible bg-center lg:w-96 lg:hidden h-full"
+              alt="">
+          </div>
+          <p class="text-montserrat font-semibold lg:text-2xl">Liv Lovina Hotel invites you to a peaceful seaside escape
+            in
+            North Bali. Just steps from Lovina Beach, where dolphins greet the sunrise, our hotel blends comfort,
+            cultural charm, and coastal beauty. <br><br>With elegant rooms, a relaxing pool, and warm hospitality, it’s
+            the perfect getaway for couples, families, and travelers alike.</p>
+          <div class="star flex gap-5 justify-center lg:justify-start">
+            <img src="assets/images/star.png" class="size-8" alt="">
+            <img src="assets/images/star.png" class="size-8" alt="">
+            <img src="assets/images/star.png" class="size-8" alt="">
+            <img src="assets/images/star.png" class="size-8" alt="">
+            <img src="assets/images/star.png" class="size-8" alt="">
+          </div>
+          <div class="card flex gap-5 items-center p-10 px-14 rounded-2xl mb-3 shadow-lg w-1/1 lg:w-fit">
+            <img src="assets/images/experience-logo.png" class=" size-15 lg:size-20" alt="">
+            <div class="des flex flex-col">
+              <h6 class="text-headings lg:text-2xl">Rating based on 1100+ reviews</h6>
+              <p class="text-montserrat font-semibold text-zinc-600">Google Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="img w-1/1 object-cover lg:w-1/3 flex justify-end">
+          <img src="assets/images/experience.png" class=" object-cover hidden bg-center lg:w-96 lg:block h-full" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- ACCOMMODATIONS -->
+    <section
+      class="mt-15 bg-[var(--color-primary)] flex flex-col items-center justify-center py-10 md:py-16 overflow-x-hidden">
+      <div class="text-center text-white mb-8 w-full px-4">
+        <div class="flex items-center justify-center mb-3">
+          <div class="w-1/4 md:w-1/3 h-[1px] bg-white"></div>
+          <p class="text-xs md:text-sm tracking-widest font-semibold mx-3 md:mx-6"
+            style="margin-bottom: 0; font-family: var(--font-montserrat);">
+            LIV&nbsp;LOVINA&nbsp;HOTEL
+          </p>
+          <div class="w-1/4 md:w-1/3 h-[1px] bg-white"></div>
+        </div>
+        <h1 class="text-2xl md:text-4xl" style="font-family: var(--font-heading);">ACCOMMODATIONS</h1>
+      </div>
+
+      <div class="relative w-[90%] md:w-3/4">
+        <div id="slider-rooms" class="flex transition-transform duration-700 ease-in-out gap-6 md:gap-10 mb-10">
+          <div class="min-w-full flex flex-col items-center text-center text-white relative">
+            <img src="assets/images/standar-ac.png" alt="Standard Room"
+              class="w-full h-[220px] brightness-50 sm:h-[300px] md:h-[400px] object-cover" />
+            <div class="absolute bottom-8 md:bottom-14 text-center w-full">
+              <h2 class="text-lg md:text-3xl text-headings">STANDARD ROOM</h2>
+              <p class="text-xs md:text-sm text-montserrat mt-1">A larger room with extra comfort.</p>
+            </div>
+          </div>
+
+          <div class="min-w-full flex flex-col items-center text-center text-white relative">
+            <img src="assets/images/deluxe-ac.png" alt="Deluxe Room"
+              class="w-full h-[220px] brightness-50 sm:h-[300px] md:h-[400px] object-cover" />
+            <div class="absolute bottom-8 md:bottom-14 text-center w-full">
+              <h2 class="text-lg md:text-3xl text-headings">DELUXE ROOM</h2>
+              <p class="text-xs md:text-sm text-montserrat mt-1">Perfect for a simple and budget-friendly stay.</p>
+            </div>
+          </div>
+
+          <div class="min-w-full flex flex-col items-center text-center text-white relative">
+            <img src="assets/images/vip-ac.png" alt="VIP Room"
+              class="w-full h-[220px] brightness-50 sm:h-[300px] md:h-[400px] object-cover" />
+            <div class="absolute bottom-8 md:bottom-14 text-center w-full">
+              <h2 class="text-lg md:text-3xl text-headings">VIP ROOM</h2>
+              <p class="text-xs md:text-sm text-montserrat mt-1"> upgraded bathroom, and special amenities for a
+                luxurious stay.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-2 md:bottom-0 left-1/2 -translate-x-1/2 flex items-center space-x-4 md:space-x-6">
+          <button id="prevBtn" class="text-white hover:text-gray-300 transition cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div id="indicators" class="flex space-x-2">
+            <span class="w-2.5 h-2.5 md:w-3 md:h-3 cursor-pointer bg-white rounded-full opacity-70"></span>
+            <span class="w-2.5 h-2.5 md:w-3 md:h-3 cursor-pointer bg-white/40 rounded-full opacity-70"></span>
+            <span class="w-2.5 h-2.5 md:w-3 md:h-3 cursor-pointer bg-white/40 rounded-full opacity-70"></span>
+          </div>
+
+          <button id="nextBtn" class="text-white hover:text-gray-300 transition cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- IFRAME -->
+    <section class="mt-10 md:mt-20 px-5 md:px-15">
+      <div class="relative w-full overflow-hidden rounded-3xl shadow-lg max-w-7xl max-h-[600px] mx-auto aspect-video">
+        <iframe class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/eGUor824a74?si=ua8wiEJ6kpSzDmKD" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+    <!-- GALLERY -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <div class=" flex flex-col items-center text-center md:text-left mb-10">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4" style="font-family: var(--font-heading);">TROPICAL STAY</h2>
+        <p class="font-medium text-lg text-[#1E1E1E] text-center max-w-2xl"
+          style="font-family: var(--font-montserrat);">
+          Enjoy a relaxing stay with modern rooms and tropical villas designed for every need.
+        </p>
+      </div>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <img src="assets/images/gallery1.png" alt="gallery1" class="object-cover w-full h-72 md:h-80">
+        <img src="assets/images/gallery2.png" alt="gallery2" class="object-cover w-full h-72 md:h-80">
+        <img src="assets/images/gallery3.png" alt="gallery3" class="object-cover w-full h-72 md:h-80">
+
+        <div class="flex flex-col justify-center col-span-2 md:col-span-2 px-4">
+          <p class="text-[#1E1E1E] text-lg font-medium" style="font-family: var(--font-montserrat);">
+            Enjoy a relaxing stay with modern rooms and tropical villas designed for every need.
+          </p>
+        </div>
+
+        <img src="assets/images/gallery4.png" alt="gallery3" class="object-cover w-full h-72 md:h-80">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-1 lg:grid-cols-6 lg:gap-4 mt-4">
+        <div class="w-full mb-3 lg:mb-0">
+          <img src="assets/images/gallery5.png" alt="gallery3" class="object-cover w-full h-72 md:h-80">
+        </div>
+
+        <div class="col-span-2 hidden md:block"></div>
+
+        <div class="col-span-2 grid grid-cols-2 gap-4 w-full">
+          <img src="assets/images/gallery6.png" alt="gallery3" class="object-cover w-full h-72 md:h-80">
+          <img src="assets/images/gallery7.png" alt="gallery3" class="object-cover w-full h-72 md:h-80">
+        </div>
+
+      </div>
+    </section>
+    <!-- EXPLORE DESTINATIONS CARD -->
+    <section class="mt-15 md:mt-20 px-5 md:px-15 lg:px-25 shadow-lg pb-5">
+      <div class="flex flex-col md:flex-row lg:flex-end justify-center text-center">
+        <div class="">
+          <h1 class="text-3xl md:text-4xl uppercase" style="font-family: var(--font-heading);">ACTIVITY
+          </h1>
+          <p class="mb-3 text-black capitalize text-montserrat text-lg md:text-xl font-medium">
+            Destination recommendation
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-5 md:mb-13 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-7">
+        <div class="relative min-h-[550px]">
+          <img src="assets/images/activity1.png" alt="Destination 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/25"></div>
+          <div class="absolute bottom-4 text-white w-full">
+            <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+              style="font-family: var(--font-montserrat);">watching dolphin</h2>
+            <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Lovina
+              Beach</p>
+          </div>
+        </div>
+
+
+        <div class="relative min-h-[550px]">
+          <img src="assets/images/activity2.png" alt="Destination 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/25"></div>
+          <div class="absolute bottom-4 text-white w-full">
+            <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+              style="font-family: var(--font-montserrat);">swimming dolphin</h2>
+            <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Lovina
+              Beach</p>
+          </div>
+        </div>
+
+        <div class="relative min-h-[550px]">
+          <img src="assets/images/activity3.png" alt="Destination 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/25"></div>
+          <div class="absolute bottom-4 text-white w-full">
+            <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+              style="font-family: var(--font-montserrat);">snorkeling</h2>
+            <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Lovina
+              Beach</p>
+          </div>
+        </div>
+
+        <div class="relative min-h-[550px]">
+          <img src="assets/images/activity4.png" alt="Destination 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/25"></div>
+          <div class="absolute bottom-4 text-white w-full">
+            <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-3"
+              style="font-family: var(--font-montserrat);">blue <br> lagoon</h2>
+            <p class="text-lg md:text-xl text-center" style="font-family: var(--font-montserrat);">at Sambangan
+              Village</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- REVIEW -->
+    <section class="reviews flex flex-col p-5 lg:flex-row md:p-10 lg:p-30 justify-between gap-10 ">
+      <div class="view flex flex-col gap-3 p-10 rounded-2xl shadow-lg">
+        <div class="profile flex gap-3">
+          <img src="assets/images/view2.png" class="size-12" alt="">
+          <div class="det">
+            <h6 class="text-montserrat text-[18px] font-semibold">Mr. Egolo</h6>
+            <p class="text-montserrat  text-[11px] text-gray-400 ">2024-12-09</p>
+          </div>
+
+        </div>
+        <div class="star flex gap-1">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+        </div>
+        <p class="text-[11px] text-montserrat font-medium">
+          This place is definition of 5 star in Ubud Jungle. Thank you to the team who should be very proud of
+          themselves, every one of the staff are extremely helpful and always happy to address
+        </p>
+        <p class="text-[11px] text-montserrat font-medium text-gray-400">Read More</p>
+      </div>
+      <div class="view flex flex-col gap-3 p-10 rounded-2xl shadow-lg">
+        <div class="profile flex gap-3">
+          <img src="assets/images/view3.png" class="size-12" alt="">
+          <div class="det">
+            <h6 class="text-montserrat text-[18px] font-semibold">Mrs. Mariam</h6>
+            <p class="text-montserrat  text-[11px] text-gray-400 ">2024-12-09</p>
+          </div>
+
+        </div>
+        <div class="star flex gap-1">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+        </div>
+        <p class="text-[11px] text-montserrat font-medium">
+          This place is definition of 5 star in Ubud Jungle. Thank you to the team who should be very proud of
+          themselves, every one of the staff are extremely helpful and always happy to address
+        </p>
+        <p class="text-[11px] text-montserrat font-medium text-gray-400">Read More</p>
+      </div>
+      <div class="view flex flex-col gap-3 p-10 rounded-2xl shadow-lg">
+        <div class="profile flex gap-3">
+          <img src="assets/images/view1.png" class="size-12" alt="">
+          <div class="det">
+            <h6 class="text-montserrat text-[18px] font-semibold">Mr. Lodon</h6>
+            <p class="text-montserrat  text-[11px] text-gray-400 ">2024-12-09</p>
+          </div>
+
+        </div>
+        <div class="star flex gap-1">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+          <img src="assets/images/star.png" class="size-[17px]" alt="">
+        </div>
+        <p class="text-[11px] text-montserrat font-medium">
+          This place is definition of 5 star in Ubud Jungle. Thank you to the team who should be very proud of
+          themselves, every one of the staff are extremely helpful and always happy to address
+        </p>
+        <p class="text-[11px] text-montserrat font-medium text-gray-400">Read More</p>
+      </div>
+
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-[var(--color-primary)] text-white py-10 px-6 md:px-16">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Logo & Social Icons -->
+        <div>
+          <img src="assets/images/logo.png" alt="Logo" class="w-65 mb-6">
+          <div class="flex space-x-4">
+            <a href="javascript:void(0)" class="border border-white rounded-full p-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff"
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+              </svg>
+            </a>
+            <a href="javascript:void(0)" class="border border-white rounded-full p-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff"
+                  d="M17 3.5a.5.5 0 0 0-.5-.5H14a4.77 4.77 0 0 0-5 4.5v2.7H6.5a.5.5 0 0 0-.5.5v2.6a.5.5 0 0 0 .5.5H9v6.7a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6.7h2.62a.5.5 0 0 0 .49-.37l.72-2.6a.5.5 0 0 0-.48-.63H13V7.5a1 1 0 0 1 1-.9h2.5a.5.5 0 0 0 .5-.5Z" />
+              </svg>
+            </a>
+            <a href="javascript:void(0)" class="border border-white rounded-full p-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff"
+                  d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-inter);">CONTACT INFORMATION</h3>
+          <p class="text-gray-300 leading-relaxed mb-2" style="font-family: var(inter);">
+            Jl. Seririt - Singaraja Pemaron,<br>
+            Kabupaten Buleleng, Bali 81119
+          </p>
+          <p class="text-gray-300 mb-1" style="font-family: var(inter);">info@livlovinahotel.com</p>
+          <p class="text-gray-300" style="font-family: var(inter);">+62 858 6996 7777</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-inter);">CONTACT INFORMATION</h3>
+          <ul class="space-y-1 text-gray-300">
+            <li><a href="javascript:void(0)" class="hover:text-white" style="font-family: var(--font-inter);">Home</a>
+            </li>
+            <li><a href="javascript:void(0)" class="hover:text-white" style="font-family: var(--font-inter);">About
+                Us</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white" style="font-family: var(--font-inter);">Rooms</a>
+            </li>
+            <li><a href="javascript:void(0)" class="hover:text-white"
+                style="font-family: var(--font-inter);">Gallery</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white" style="font-family: var(--font-inter);">Blog</a>
+            </li>
+            <li><a href="javascript:void(0)" class="hover:text-white" style="font-family: var(--font-inter);">Contact
+                Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="max-w-7xl mx-auto mt-10 border-t border-white/60 pt-4 text-center md:text-left">
+        <p class="text-gray-200 text-sm">
+          © Copyright 2025 <span class="font-bold text-white">Liv Lovina Hotel</span>. All Rights Reserved.
+          Powered By
+          <span class="font-bold text-white">A1GO BALI</span>
+        </p>
+      </div>
+    </footer>
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <!-- JS ACCOMMODATIONS SLIDER -->
+  <script>
+    (function () {
+      const slider = document.getElementById('slider-rooms');
+      const indicators = document.querySelectorAll('#indicators span');
+      if (!slider) return;
+
+      const slides = Array.from(slider.children);
+      const total = slides.length;
+      let currentIndex = 0;
+      let slideWidth = 0;
+      let gapPx = 0;
+      let autoSlideTimer = null;
+
+      // utility: convert gap string (px/rem/em) to px
+      function gapToPx(gapStr, el) {
+        if (!gapStr) return 0;
+        const rootFont = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+        if (gapStr.endsWith('px')) return parseFloat(gapStr);
+        if (gapStr.endsWith('rem')) return parseFloat(gapStr) * rootFont;
+        if (gapStr.endsWith('em')) return parseFloat(gapStr) * (parseFloat(getComputedStyle(el).fontSize) || rootFont);
+        // fallback
+        return parseFloat(gapStr) || 0;
+      }
+
+      function calcSizes() {
+        // slideWidth = width of one slide (includes padding inside slide but NOT gap)
+        slideWidth = slides[0].getBoundingClientRect().width;
+        const gapStr = getComputedStyle(slider).gap || getComputedStyle(slider)['column-gap'] || '0px';
+        gapPx = gapToPx(gapStr, slider);
+      }
+
+      function updateIndicators() {
+        indicators.forEach((dot, i) => {
+          dot.classList.toggle('bg-white', i === currentIndex);
+          dot.classList.toggle('bg-white/40', i !== currentIndex);
+        });
+      }
+
+      function updateSlider(animate = true) {
+        // Calculate offset in px: currentIndex * (slideWidth + gap)
+        const offset = currentIndex * (slideWidth + gapPx);
+        // optional: toggle transition for nicer UX (kept via class in your HTML)
+        if (!animate) slider.style.transition = 'none';
+        else slider.style.transition = ''; // let Tailwind CSS rule handle it
+        slider.style.transform = `translateX(-${offset}px)`;
+        // restore transition if disabled
+        if (!animate) {
+          // force reflow then restore transition
+          void slider.offsetWidth;
+          slider.style.transition = '';
+        }
+        updateIndicators();
+      }
+
+      // Next / Prev handlers
+      function next() {
+        currentIndex = (currentIndex + 1) % total;
+        updateSlider();
+      }
+      function prev() {
+        currentIndex = (currentIndex - 1 + total) % total;
+        updateSlider();
+      }
+
+      // Hook up buttons
+      const nextBtn = document.getElementById('nextBtn');
+      const prevBtn = document.getElementById('prevBtn');
+      if (nextBtn) nextBtn.addEventListener('click', () => { next(); restartAuto(); });
+      if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restartAuto(); });
+
+      // Indicators clickable
+      indicators.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          currentIndex = i;
+          updateSlider();
+          restartAuto();
+        });
+      });
+
+      // Auto slide
+      function startAuto() {
+        stopAuto();
+        autoSlideTimer = setInterval(() => { next(); }, 5000);
+      }
+      function stopAuto() {
+        if (autoSlideTimer) { clearInterval(autoSlideTimer); autoSlideTimer = null; }
+      }
+      function restartAuto() { stopAuto(); startAuto(); }
+
+      // Recalculate sizes on load & resize & when images finish loading
+      function init() {
+        calcSizes();
+        updateSlider(false);
+        updateIndicators();
+        startAuto();
+      }
+
+      // wait for images to load — ensures widths computed correctly
+      if (document.readyState === 'complete') {
+        // in case already loaded
+        init();
+      } else {
+        window.addEventListener('load', init, { once: true });
+      }
+      window.addEventListener('resize', () => {
+        // recompute sizes and reposition without animation for smoothness
+        const prevIndex = currentIndex;
+        calcSizes();
+        // ensure current index bounds
+        if (currentIndex >= total) currentIndex = total - 1;
+        updateSlider(false);
+      });
+
+      // optional: pause on hover / resume
+      const parent = slider.parentElement;
+      if (parent) {
+        parent.addEventListener('mouseenter', stopAuto);
+        parent.addEventListener('mouseleave', startAuto);
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
