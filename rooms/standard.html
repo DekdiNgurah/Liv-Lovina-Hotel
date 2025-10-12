@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standard Rooms</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="w-full">
+        <div id="navbar"
+            class="w-full bg-white lg:bg-transparent fixed top-0 left-0 z-50 transition-transform duration-500 ease-in-out  md:px-10 lg:px-15 xl:px-15 2xl:px-15">
+            <div
+                class="navbar flex justify-between items-center px-4 md:px-0 lg:px-0 xl:px-0 2xl:px-0 py-3 md:py-4 lg:py-4 xl:py-4 2xl:py-4">
+
+                <div class="hamburger lg:hidden">
+                    <input id="menu-toggle" class="checkbox" type="checkbox" />
+                    <svg fill="none" viewBox="0 0 46 50" height="40" width="40">
+                        <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 11L44 11" />
+                        <path class="lineMid line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 24H43" />
+                        <path class="lineBottom line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 37H43" />
+                    </svg>
+                </div>
+
+                <div class="hidden lg:flex flex-1 items-center justify-between lg:py-2 lg:pt-7">
+
+                    <div class="nav-parent w-full lg:px-70">
+                        <ul class="nav-list flex justify-between w-full items-center">
+                            <li class="px-[10px] py-[6px]">
+                                <a href="../index.html">
+                                    <span class="text-xl text-white">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px] lg:text-sm">
+                                <a href="../about.html">
+                                    <span class="text-xl text-white">
+                                        About&nbsp;us
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="contact.html">
+                                    <span class="text-xl text-white active">
+                                        Rooms
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="javascript:void(0)">
+                                    <span class="text-xl text-white">
+                                        Blog</span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="javascript:void(0)">
+                                    <span class="text-xl text-white">
+                                        Gallery</span>
+                                </a>
+                            </li>
+                            <li class="px-[10px] py-[6px]">
+                                <a href="javascript:void(0)">
+                                    <span class="text-xl text-white">
+                                        Contact&nbsp;Us</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span
+                                        class="text-lg text-uppercase text-white px-7 py-4 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-hover)] duration-300 transition-all cursor-pointer">
+                                        BOOK&nbsp;NOW</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div id="mobile-menu" class="lg:hidden hidden transition-all duration-900 ease-in-out overflow-hidden">
+                <ul class="flex flex-col gap-4 py-5 pl-5 md:pl-2">
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Home</a></li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">About
+                            Us</a></li>
+                    <li><a href="contact.html" class="block text-gray-700 text-xl md:text-2xl active">Rooms</a></li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Blog</a>
+                    </li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Gallery</a>
+                    </li>
+                    <li><a href="javascript:void(0)" class="block text-gray-700 text-xl md:text-2xl">Contact Us</a>
+                    </li>
+                    <li class="px-7 py-3 rounded-full bg-[var(--color-primary)] w-fit">
+                        <a href="javascript:void(0)" class="block text-white text-xl md:text-2xl text-uppercase">Book
+                            Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="">
+        <div class="relative w-full">
+
+            <img src="../assets/images/standardrms.png" class="w-full h-[300px] md:h-[500px] lg:h-[950px] object-cover"
+                alt="Hero Section Image" />
+
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <div class="absolute bottom-0 flex flex-col justify-center items-center w-full py-5 md:py-16 lg:py-20">
+                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                    <div class="hidden md:block w-full bg-[var(--color-primary)] h-[3px]"></div>
+
+                    <div
+                        class="flex flex-col justify-center max-w-[300px] md:min-w-[530px] lg:min-w-fit mx-0 md:mx-10 lg:mx-20 text-center">
+                        <p
+                            class="text-[var(--color-accent)] text-sm md:text-base font-semibold pb-2 md:pb-5 text-montserrat">
+                            Standard Room > Rooms > Home
+                        </p>
+                        <h1 class="text-white text-3xl md:text-5xl lg:text-7xl uppercase text-headings min-w-fit">
+                            standard rooms
+                        </h1>
+                        <p class="text-white text-xs text-sm md:text-lg mt-2 md:mt-4 text-montserrat max-w-lg mx-auto">
+                            Welcome to Hotel Liv Lovina, where comfort and Balinese charm come
+                            together in the heart of North Bali.
+                        </p>
+                    </div>
+
+                    <div class="hidden md:block w-full bg-[var(--color-primary)] h-[3px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDER IMAGE -->
+    <section class="relative bg-[var(--color-dark)] py-5 md:py-8 lg:py-12 mb-30">
+        <div class="relative px-4 sm:px-10 md:px-20 z-1">
+            <!-- SVG Sun -->
+            <span class="flex items-center justify-center w-full mb-6 sm:mb-8 md:mb-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 sm:w-14 sm:h-14 md:w-[70px] md:h-[70px]"
+                    viewBox="0 0 56 56">
+                    <path fill="#fff"
+                        d="M30.04 4.61c0-1.102-.938-2.04-2.04-2.04s-2.039.938-2.039 2.04v4.92c0 1.102.938 2.04 2.04 2.04c1.1 0 2.038-.938 2.038-2.04Zm9.538 8.929c-.773.797-.773 2.11 0 2.883c.797.797 2.086.82 2.906 0l3.493-3.492a2.065 2.065 0 0 0 0-2.907c-.774-.773-2.086-.773-2.883 0Zm-26.062 2.883c.773.797 2.086.797 2.882 0c.774-.75.774-2.11.024-2.883l-3.492-3.516c-.75-.75-2.086-.773-2.883 0c-.774.774-.774 2.11-.024 2.883ZM28 16.047c-6.539 0-11.953 5.414-11.953 11.953S21.46 39.977 28 39.977c6.516 0 11.93-5.438 11.93-11.977S34.516 16.047 28 16.047m0 3.586c4.57 0 8.367 3.797 8.367 8.367S32.57 36.39 28 36.39c-4.594 0-8.39-3.82-8.39-8.39s3.796-8.367 8.39-8.367m23.32 10.406c1.102 0 2.04-.937 2.04-2.039s-.938-2.04-2.04-2.04h-4.898c-1.102 0-2.04.938-2.04 2.04s.938 2.039 2.04 2.039ZM4.68 25.961c-1.102 0-2.04.937-2.04 2.039s.938 2.039 2.04 2.039h4.898c1.102 0 2.04-.937 2.04-2.039s-.938-2.04-2.04-2.04ZM42.46 39.6a2.08 2.08 0 0 0-2.883 0c-.773.774-.773 2.087 0 2.883L43.094 46c.797.773 2.11.75 2.883-.023c.797-.774.797-2.086 0-2.883Zm-32.437 3.47c-.797.773-.797 2.109-.024 2.882c.774.774 2.11.797 2.906.024l3.492-3.493c.774-.773.774-2.086.024-2.882c-.774-.774-2.11-.774-2.906 0Zm20.015 3.398c0-1.102-.937-2.04-2.039-2.04s-2.039.938-2.039 2.04v4.922c0 1.101.938 2.039 2.04 2.039c1.1 0 2.038-.938 2.038-2.04Z" />
+                </svg>
+            </span>
+
+            <!-- SLIDER WRAPPER -->
+            <div class="flex items-center justify-center gap-6">
+                <!-- Left Button -->
+                <button id="prevBtn"
+                    class="hidden sm:hidden md:block text-white rounded-full cursor-pointer transition hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[60px] h-[60px]" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M14.71 6.71a.996.996 0 0 0-1.41 0L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59a.996.996 0 1 0 1.41-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41" />
+                    </svg>
+                </button>
+
+                <!-- Slider Container -->
+                <div class="relative w-full max-w-5xl overflow-hidden shadow-lg">
+                    <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+                        <img src="https://picsum.photos/id/10/1200/600" class="w-full object-cover flex-shrink-0"
+                            alt="Slide 1">
+                        <img src="https://picsum.photos/id/20/1200/600" class="w-full object-cover flex-shrink-0"
+                            alt="Slide 2">
+                        <img src="https://picsum.photos/id/30/1200/600" class="w-full object-cover flex-shrink-0"
+                            alt="Slide 3">
+                        <img src="https://picsum.photos/id/40/1200/600" class="w-full object-cover flex-shrink-0"
+                            alt="Slide 4">
+                    </div>
+
+                    <!-- Bullet Indicators (Desktop & Tablet) -->
+                    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex space-x-2">
+                        <span class="dot w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                        <span class="dot w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                        <span class="dot w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                        <span class="dot w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                    </div>
+                </div>
+
+                <!-- Right Button -->
+                <button id="nextBtn"
+                    class="hidden sm:hidden md:block text-white rounded-full cursor-pointer transition hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[60px] h-[60px]" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- MOBILE BUTTONS & BULLETS (hanya tampil di HP) -->
+            <div class="flex items-center md:hidden justify-center gap-4 mt-6 z-10">
+                <button id="prevBtnMobile"
+                    class="text-white rounded-full cursor-pointer transition hover:scale-110 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M14.71 6.71a.996.996 0 0 0-1.41 0L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59a.996.996 0 1 0 1.41-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41" />
+                    </svg>
+                </button>
+
+                <!-- Bullets Mobile -->
+                <div class="flex justify-center space-x-2">
+                    <span class="dot-mobile w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                    <span class="dot-mobile w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                    <span class="dot-mobile w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                    <span class="dot-mobile w-3 h-3 rounded-full bg-white/50 cursor-pointer"></span>
+                </div>
+
+                <button id="nextBtnMobile"
+                    class="text-white rounded-full cursor-pointer transition hover:scale-110 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Wave -->
+        <span class="w-full absolute bottom-[-25px] md:bottom-[-70px] lg:bottom-[-120px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="var(--color-dark)" fill-opacity="1"
+                    d="M0,256L80,250.7C160,245,320,235,480,240C640,245,800,267,960,272C1120,277,1280,267,1360,261.3L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+                </path>
+            </svg>
+        </span>
+    </section>
+
+    <section class="px-5 md:px-15 lg:px-40 mt-[-60px] md:mt-10 lg:mt-40">
+        <p class="text-xl md:text-3xl text-gray-900 font-medium tracking-wide" style="font-family: var(--font-montserrat);">
+            Enjoy a comfortable stay at a
+            friendly price at Liv Lovina Hotel. The Standard Room is designed for guests seeking practical accommodation
+            without sacrificing comfort in the heart of Lovina. The interior is simple yet clean, with a warm Balinese
+            tropical touch that makes your rest more pleasant.</p>
+
+        <div class="py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <h2 class="text-3xl" style="font-family: var(--font-heading);">ROOM<br>SPECIFICATIONS</h2>
+
+                <div class="mt-6 space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-[40px] h-[40px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path
+                                        d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                    <path fill="currentColor"
+                                        d="M3 5a1 1 0 0 1 .993.883L4 6v7h7V8a1 1 0 0 1 .883-.993L12 7h7a3 3 0 0 1 2.995 2.824L22 10v8a1 1 0 0 1-1.993.117L20 18v-3H4v3a1 1 0 0 1-1.993.117L2 18V6a1 1 0 0 1 1-1m16 4h-6v4h7v-3a1 1 0 0 0-1-1M7.5 7a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m0 2a.5.5 0 1 0 0 1a.5.5 0 0 0 0-1" />
+                                </g>
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-bold text-xl" style="font-family: var(--font-montserrat);">Bed Type</p>
+                            <p class="text-xl" style="font-family: var(--font-montserrat);">Queen or Twin Bed</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-[40px] h-[40px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M10 3.25C7.904 3.25 6.171 4.91 6.171 7S7.904 10.75 10 10.75c1.65 0 3.075-1.029 3.607-2.486a2.643 2.643 0 1 0 .057-2.358C13.184 4.36 11.714 3.25 10 3.25M7.671 7c0-1.224 1.024-2.25 2.329-2.25S12.329 5.776 12.329 7S11.305 9.25 10 9.25S7.671 8.224 7.671 7m6.686.143a1.643 1.643 0 1 1 3.286 0a1.643 1.643 0 0 1-3.286 0m-6.072 4.564c-.403-.261-.984-.462-1.596-.294q-.245.068-.488.145l-.984.316c-1.233.394-2.188 1.373-2.51 2.613l-.011.04l-.42 2.952c-.167 1.18.485 2.401 1.78 2.701c1.197.278 3.126.57 5.944.57s4.746-.292 5.945-.57c1.293-.3 1.946-1.52 1.779-2.701l-.42-2.951l-.01-.041c-.323-1.24-1.278-2.219-2.511-2.613l-.984-.316q-.243-.077-.488-.145c-.612-.168-1.193.033-1.596.294c-.37.24-.974.529-1.715.529c-.74 0-1.345-.29-1.715-.53m-1.198 1.152c.064-.017.202-.01.384.107c.512.332 1.4.77 2.529.77s2.017-.438 2.53-.77c.18-.117.319-.124.383-.107q.215.06.428.128l.985.315c.75.24 1.308.82 1.506 1.524l.406 2.864c.075.527-.206.93-.633 1.03c-1.077.25-2.891.53-5.605.53s-4.528-.28-5.605-.53c-.427-.1-.708-.503-.634-1.03l.407-2.864a2.26 2.26 0 0 1 1.506-1.524l.985-.315q.213-.068.428-.128" />
+                                <path fill="currentColor"
+                                    d="M18.183 10.298a1.05 1.05 0 0 0-.914.202c-.27.21-.748.5-1.269.5a.5.5 0 0 0 0 1c.858 0 1.556-.457 1.883-.71a.1.1 0 0 1 .043-.024h.004q.201.053.399.118l.685.225c.526.173.925.594 1.066 1.114l.283 2.049c.056.403-.156.705-.46.777q-.335.082-.813.16a.5.5 0 1 0 .16.988q.512-.085.884-.175c.895-.213 1.333-1.07 1.22-1.887l-.291-2.106l-.007-.027a2.62 2.62 0 0 0-1.73-1.843l-.685-.225a8 8 0 0 0-.458-.136" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-bold text-xl" style="font-family: var(--font-montserrat);">Capacity</p>
+                            <p class="text-xl" style="font-family: var(--font-montserrat);">2 persons</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-[30px] h-[30px] ml-1 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0m0 469.3c-117.8 0-213.3-95.5-213.3-213.3S138.2 42.7 256 42.7S469.3 138.2 469.3 256S373.8 469.3 256 469.3m-21.3-234.6L149.3 320l32 32l96-96V85.3h-42.7v149.4z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-bold text-xl" style="font-family: var(--font-montserrat);">Check-in</p>
+                            <p class="text-xl" style="font-family: var(--font-montserrat);">from 1:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-[30px] h-[30px] ml-1 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0m0 469.3c-117.8 0-213.3-95.5-213.3-213.3S138.2 42.7 256 42.7S469.3 138.2 469.3 256S373.8 469.3 256 469.3m-21.3-234.6L149.3 320l32 32l96-96V85.3h-42.7v149.4z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-bold text-xl" style="font-family: var(--font-montserrat);">Check-out</p>
+                            <p class="text-xl" style="font-family: var(--font-montserrat);">before 12:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="italic mt-6 font-medium text-gray-900 text-xl" style="font-family: var(--font-montserrat);">
+                    *can be chosen according to your preference for a more comfortable sleep
+                </p>
+            </div>
+
+            <div class="md:border-l md:pl-10 border-gray-700">
+                <h2 class="text-3xl" style="font-family: var(--font-heading);">ROOM<br>FACILITIES</h2>
+
+                <ul class="mt-6 pl-5 space-y-4 text-gray-900 list-disc">
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Air conditioning and/or
+                        ceiling fan</li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Flat-screen TV with
+                        local channels</li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Free WiFi</li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Private bathroom</li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Basic toiletries &
+                        towels</li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Daily bottled water
+                    </li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Work desk & chair</li>
+                    <li class="text-xl font-medium" style="font-family: var(--font-montserrat);">Wardrobe / clothes rack
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="md:pt-16 pb-25 md:px-15">
+        <div class="booking flex flex-col lg:flex-row items-start lg:items-end justify-center gap-5 p-4">
+            <div class="text flex flex-col items-center">
+                <h5 class="text-3xl" style="font-family: var(--font-heading);">Book Now</h5>
+                <p class="text-inter">Best Rate Guarantee</p>
+
+            </div>
+            <div class="date flex flex-col ">
+                <h5 class="text-inter mb-2">Check in - Check out</h5>
+                <div id="date-range-picker" date-rangepicker class="flex items-center">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-900" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                            </svg>
+                        </div>
+                        <input id="datepicker-range-start" name="start" type="text"
+                            class="border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 placeholder-gray-900"
+                            placeholder="Select date start" style="background-color: transparent;">
+                    </div>
+                    <span class="mx-4 text-black text-inter">to</span>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-900" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                            </svg>
+                        </div>
+                        <input id="datepicker-range-end" name="end" type="text"
+                            class="border-2 text-inter border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 placeholder-gray-900"
+                            placeholder="Select date end">
+                    </div>
+                </div>
+
+            </div>
+
+            <form class="">
+                <label for="countries" class="block mb-2 text-inter  text-gray-900">Adults(s)</label>
+                <select id="countries"
+                    class="border-2 w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+                    <option selected disabled>Choose</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="5">6</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </form>
+
+            <form class="">
+                <label for="countries" class="block mb-2 text-inter text-gray-900">Children(s)</label>
+                <select id="countries"
+                    class="border-2 w-38 text-center text-inter appearance-none border-black text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+                    <option selected disabled>Choose</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="5">6</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </form>
+
+            <a href="javascript:void(0)"
+                class="bg-[var(--color-primary)] hover:bg-blue-950 text-white text-inter text-[20px] font-bold py-2 px-4 border-2 border-white shadow rounded cursor-pointer transition-all duration-300">
+                BOOK NOW
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-[var(--color-primary)] text-white py-10 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Logo & Social Icons -->
+            <div>
+                <img src="../assets/images/logo.png" alt="Logo" class="w-65 mb-6">
+                <div class="flex space-x-4">
+                    <a href="javascript:void(0)" class="border border-white rounded-full p-2 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" class="border border-white rounded-full p-2 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M17 3.5a.5.5 0 0 0-.5-.5H14a4.77 4.77 0 0 0-5 4.5v2.7H6.5a.5.5 0 0 0-.5.5v2.6a.5.5 0 0 0 .5.5H9v6.7a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6.7h2.62a.5.5 0 0 0 .49-.37l.72-2.6a.5.5 0 0 0-.48-.63H13V7.5a1 1 0 0 1 1-.9h2.5a.5.5 0 0 0 .5-.5Z" />
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" class="border border-white rounded-full p-2 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-inter);">CONTACT INFORMATION</h3>
+                <p class="text-gray-300 leading-relaxed mb-2" style="font-family: var(inter);">
+                    Jl. Seririt - Singaraja Pemaron,<br>
+                    Kabupaten Buleleng, Bali 81119
+                </p>
+                <p class="text-gray-300 mb-1" style="font-family: var(inter);">info@livlovinahotel.com</p>
+                <p class="text-gray-300" style="font-family: var(inter);">+62 858 6996 7777</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div>
+                <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-inter);">CONTACT INFORMATION</h3>
+                <ul class="space-y-1 text-gray-300">
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Home</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">About Us</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Rooms</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Gallery</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Blog</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-white"
+                            style="font-family: var(--font-inter);">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="max-w-7xl mx-auto mt-10 border-t border-white/60 pt-4 text-center md:text-left">
+            <p class="text-gray-200 text-sm">
+                © Copyright 2025 <span class="font-bold text-white">Liv Lovina Hotel</span>. All Rights Reserved.
+                Powered By
+                <span class="font-bold text-white">A1GO BALI</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.getElementById('slider');
+            const slides = slider.children.length;
+            const dots = document.querySelectorAll('.dot');
+            const dotsMobile = document.querySelectorAll('.dot-mobile');
+            let index = 0;
+
+            function showSlide(n) {
+                index = (n + slides) % slides;
+                slider.style.transform = `translateX(-${index * 100}%)`;
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('bg-white', i === index);
+                    dot.classList.toggle('bg-white/50', i !== index);
+                });
+
+                dotsMobile.forEach((dot, i) => {
+                    dot.classList.toggle('bg-white', i === index);
+                    dot.classList.toggle('bg-white/50', i !== index);
+                });
+            }
+
+            const prevButtons = [
+                document.getElementById('prevBtn'),
+                document.getElementById('prevBtnMobile')
+            ].filter(Boolean);
+
+            const nextButtons = [
+                document.getElementById('nextBtn'),
+                document.getElementById('nextBtnMobile')
+            ].filter(Boolean);
+
+            prevButtons.forEach(btn => btn.addEventListener('click', () => showSlide(index - 1)));
+            nextButtons.forEach(btn => btn.addEventListener('click', () => showSlide(index + 1)));
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => showSlide(i));
+            });
+
+            setInterval(() => showSlide(index + 1), 5000);
+
+            showSlide(0);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
