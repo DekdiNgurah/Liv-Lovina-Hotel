@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header
+        class="flex justify-between md:px-3 lg:px-20 flex-col md:flex-row items-center pt-8 md:pt-0  border-b w-full">
+        <span class="w-full px-2 md:w-fit">
+            <a href="javascript:void(0)">
+                <svg class="w-9 h-9 md:w-[50px] md:h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="var(--color-primary)" d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z" />
+                </svg>
+            </a>
+        </span>
+        <div class="flex items-center flex-col md:flex-row">
+            <img src="assets/images/logo-berwarna.png" alt="Logo" class="w-70 mb-2">
+            <div class="flex flex-col items-center md:items-start pb-5 md:pb-0">
+                <div class="flex items-start justify-start mb-2">
+
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                    </div>
+
+                </div>
+                <h1 class="text-center text-2xl md:text-4xl font-bold tracking-wide text-inter">LIV LOVINA HOTEL</h1>
+                <p class="text-sm md:text-md text-gray-900 font-medium text-inter text-center md:text-start">Jl. Seririt
+                    - Singaraja
+                    Pemaron, Kabupaten Buleleng,
+                    Bali 81119</p>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </header>
+
+
+
+    <!-- BOOKING DETAIL -->
+    <section class=" p-5 lg:p-10 book-detail w-full flex items-center justify-center">
+        <div class=" w-full border rounded-2xl border-gray-300 pb-15 lg:pb-30 p-5 lg:w-1/3 lg:p-10">
+            <h2 class="text-inter font-semibold text-[19px]">
+                Booking Detail
+            </h2>
+            <div class="head flex flex-col gap-5">
+                <p class="text-inter text-xs">Check your booking detail</p>
+                <div class="flex items-center justify-between">
+                    <h3 class="text-inter font-bold text-[19px]">Total</h3>
+                    <h3 class="text-inter font-bold text-[19px]">IDR 400,000.00</h3>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3 class="text-inter font-bold text-[19px]"> </h3>
+                    <h3 class="text-inter text-[10px]">include taxes and fees</h3>
+                </div>
+
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(1)"
+                    class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span class="text-inter font-bold text-gray-700">Price Information</span>
+                    <span id="icon-1"
+                        class=" flex gap-3 items-center text-inter font-bold text-[var(--color-primary)] transition-transform duration-300">
+                        <p>Show Detail</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                            class="size-6 text-[var(--color-primary)]">
+                            <path fill-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-1" class="max-h-0 overflow-hidden flex flex-col gap-8 transition-all duration-300 ease-in-out">
+                    <div class="flex items-center gap-2">
+                        <p
+                            class="px-3 py-2 text-[12px] text-inter font-bold text-[#1E4437] bg-[#D0E7DD] border-2 rounded-[8px] border-[#98B1A8]">
+                            Room 1</p>
+                        <h6 class="text-inter font-bold text-[12px]">STANDARD ROOM - Smart Saver
+                            <br>Room Breakfast
+                        </h6>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <span class="flex text-gray-700 text-inter gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <g fill="none">
+                                    <path fill="currentColor"
+                                        d="M2 9c0-1.886 0-2.828.586-3.414S4.114 5 6 5h12c1.886 0 2.828 0 3.414.586S22 7.114 22 9c0 .471 0 .707-.146.854C21.707 10 21.47 10 21 10H3c-.471 0-.707 0-.854-.146C2 9.707 2 9.47 2 9" />
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M2.586 21.414C2 20.828 2 19.886 2 18v-5c0-.471 0-.707.146-.854C2.293 12 2.53 12 3 12h18c.471 0 .707 0 .854.146c.146.147.146.383.146.854v5c0 1.886 0 2.828-.586 3.414S19.886 22 18 22H6c-1.886 0-2.828 0-3.414-.586M8 16a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2z"
+                                        clip-rule="evenodd" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                        d="M7 3v3m10-3v3" />
+                                </g>
+                            </svg>
+                            <span>
+                                06 Oct 2025 - 08 Oct 2025
+                            </span>
+                        </span>
+
+                        <div class="flex text-gray-700 text-inter w-full gap-3">
+                            <span class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M32 32c17.7 0 32 14.3 32 32v224h224V160c0-17.7 14.3-32 32-32h160c53 0 96 43 96 96v224c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64H64v64c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-17.7 14.3-32 32-32m80 160a64 64 0 1 1 128 0a64 64 0 1 1-128 0" />
+                                </svg>
+
+                                <span class="">
+                                    1 Room
+                                </span>
+                            </span>
+
+                            <span class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path
+                                            d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor"
+                                            d="M9.5 12a4.5 4.5 0 1 0 0-9a4.5 4.5 0 0 0 0 9M21 9a3 3 0 1 1-6 0a3 3 0 0 1 6 0M9.5 13c1.993 0 3.805.608 5.137 1.466c.667.43 1.238.937 1.653 1.49c.407.545.71 1.2.71 1.901c0 .755-.35 1.36-.864 1.797c-.485.41-1.117.676-1.77.859c-1.313.367-3.05.487-4.866.487s-3.553-.12-4.865-.487c-.654-.183-1.286-.449-1.77-.859C2.349 19.218 2 18.612 2 17.857c0-.702.303-1.356.71-1.9c.415-.554.986-1.062 1.653-1.49C5.695 13.607 7.507 13 9.5 13m8.5 0c1.32 0 2.518.436 3.4 1.051c.822.573 1.6 1.477 1.6 2.52c0 .587-.253 1.073-.638 1.426c-.357.328-.809.528-1.244.66c-.87.263-1.99.343-3.118.343h-.203c.13-.348.203-.73.203-1.143c0-.99-.423-1.85-.91-2.5c-.486-.649-1.13-1.22-1.849-1.691A6.06 6.06 0 0 1 18 13" />
+                                    </g>
+                                </svg>
+
+                                <span class="">
+                                    2 Persons
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-inter font-semibold lg:text-[19px]">Subtotal</h3>
+                            <h3 class="text-inter font-semibold lg:text-[19px]">IDR 400,000.00</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-inter lg:text-[19px]">Surcharge</h3>
+                            <h3 class="text-inter lg:text-[19px]">IDR 0.00</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-inter lg:text-[19px]">Tax & Services (0.00%)</h3>
+                            <h3 class="text-inter lg:text-[19px]">IDR 0.00</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-inter text-[var(--color-primary)] font-semibold lg:text-[19px]">Total</h3>
+                            <h3 class="text-inter text-[var(--color-primary)] font-semibold lg:text-[19px]">IDR 400,000.00</h3>
+                        </div>
+    
+                    
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto py-6 px-5 md:px-8 lg:px-0 text- text-gray-600 mt-10 border-t text-inter">
+        ©Copyright 2025 <span class="font-extrabold">Liv Lovina Hotel</span>. All Rights Reserved. Powered By <span
+            class="font-extrabold text-gray-700">A1GO BALI</span>
+    </footer>
+
+    <!-- ACCORDION -->
+    <script>
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            // SVG for Down icon
+            const downSVG = `
+            <p>Show Detail</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-6 text-[var(--color-primary)]">
+        <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+      </svg>
+    `;
+
+            // SVG for Up icon
+            const upSVG = `
+            <p>Hide Detail</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-6 text-[var(--color-primary)]">
+        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+      </svg>
+    `;
+
+            // Toggle the content's max-height for smooth opening and closing
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                icon.innerHTML = downSVG;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerHTML = upSVG;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
