@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="flex justify-between md:px-3 lg:px-20 flex-col md:flex-row items-center pt-8 md:pt-0  border-b w-full">
+        <span class="w-full px-2 md:w-fit">
+            <a href="javascript:void(0)">
+                <svg class="w-9 h-9 md:w-[50px] md:h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="var(--color-primary)" d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z" />
+                </svg>
+            </a>
+        </span>
+        <div class="flex items-center flex-col md:flex-row">
+            <img src="assets/images/logo-berwarna.png" alt="Logo" class="w-70 mb-2">
+            <div class="flex flex-col items-center md:items-start pb-5 md:pb-0">
+                <div class="flex items-start justify-start mb-2">
+    
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#FFAE00"
+                                d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z" />
+                        </svg>
+                    </div>
+    
+                </div>
+                <h1 class="text-center text-2xl md:text-4xl font-bold tracking-wide text-inter">LIV LOVINA HOTEL</h1>
+                <p class="text-sm md:text-md text-gray-900 font-medium text-inter text-center md:text-start">Jl. Seririt - Singaraja
+                    Pemaron, Kabupaten Buleleng,
+                    Bali 81119</p>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </header>
+
+    <!-- BOOKING INFO -->
+    <section class="max-w-6xl mx-auto mt-6 bg-white border border-gray-300 py-2 rounded-xl shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300">
+            <div class="flex flex-col items-center py-4">
+                <p class="text-md text-gray-900 text-inter font-medium">Check in - Check Out</p>
+                <p class="font-bold text-inter mt-1">2025-10-06 / 2025-10-08</p>
+            </div>
+            <div class="flex flex-col items-center py-4">
+                <p class="text-md text-gray-900 text-inter font-medium">Adult</p>
+                <p class="font-bold text-inter mt-1">2</p>
+            </div>
+            <div class="flex flex-col items-center py-4">
+                <p class="text-md text-gray-900 text-inter font-medium">Children</p>
+                <p class="font-bold text-inter mt-1">0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROOM SECTION -->
+    <section class="max-w-6xl mx-auto mt-10 border border-gray-300 rounded-xl shadow-sm p-6 md:p-8">
+        <div class="border-b border-gray-300">
+            <h2 class="text-2xl md:text-3xl font-semibold uppercase text-inter mb-5 md:mb-6 text-center md:text-left">
+                Standard Room
+            </h2>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-7 lg:gap-10 mt-6 md:mt-7">
+            <!-- ROOM IMAGE -->
+            <div class="flex justify-center w-full lg:w-fit">
+                <img src="assets/images/standardrms.png" alt="Room"
+                    class="rounded-xl shadow-md w-full max-w-[450px] md:max-w-[500px] lg:min-w-[400px] lg:max-w-[400px] lg:min-h-[320px] lg:max-h-[320px] object-cover">
+            </div>
+
+            <div class="hidden lg:block w-[2px] bg-gray-300"></div>
+
+            <!-- ROOM DETAILS -->
+            <div class="flex flex-col justify-between w-full mt-6 lg:mt-0">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 border border-gray-300 rounded-lg px-4 py-4 md:px-5 md:py-5 gap-5">
+                    <div class="border-b md:border-b-0 md:border-r border-gray-300 pb-4 md:pb-0 md:pr-10">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
+                            <h3
+                                class="font-semibold text-inter text-xl md:text-xl text-center md:text-left mb-2 md:mb-0">
+                                Smart Saver Room Breakfast
+                            </h3>
+                            <span
+                                class="bg-[#FEE2E2] text-[#B31B1B] text-md md:text-sm px-2 py-1 rounded text-inter font-bold">
+                                Special Offer
+                            </span>
+                        </div>
+                        <div class="text-sm space-y-2 py-2 md:py-5">
+                            <span class="text-green-600 flex items-center justify-center md:justify-start gap-1">
+                                <img src="assets/images/coffe-icon.png" alt="" class="w-[14px] h-[14px]">
+                                <span class="text-[#16A34A] font-medium">
+                                    Breakfast included
+                                </span>
+                            </span>
+                            <span class="text-gray-600 flex items-center justify-center md:justify-start gap-1">
+                                <img src="assets/images/bell-icon.png" alt="" class="w-[16px] h-[16px]">
+                                <span class="text-[#454545] font-medium">
+                                    Non Refundable
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center md:items-end justify-between text-center md:text-right space-y-5 md:space-y-0">
+                        <p class="text-xl md:text-2xl font-bold text-gray-900 text-inter">
+                            IDR 400,000.00
+                        </p>
+                        <p class="text-[#B31B1B] text-xs md:text-sm text-inter font-semibold">
+                            Price for 2 night(s)
+                        </p>
+                        <p
+                            class="text-xs md:text-sm text-gray-500 mt-2 text-inter py-1 px-6 border border-gray-300 rounded bg-gray-200">
+                            1 Room
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex space-y-5 md:space-y-0 flex-col items-start md:flex-row md:items-center md:justify-between mt-6 w-full">
+
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="flex text-gray-700 text-inter gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <g fill="none">
+                                    <path fill="currentColor"
+                                        d="M2 9c0-1.886 0-2.828.586-3.414S4.114 5 6 5h12c1.886 0 2.828 0 3.414.586S22 7.114 22 9c0 .471 0 .707-.146.854C21.707 10 21.47 10 21 10H3c-.471 0-.707 0-.854-.146C2 9.707 2 9.47 2 9" />
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M2.586 21.414C2 20.828 2 19.886 2 18v-5c0-.471 0-.707.146-.854C2.293 12 2.53 12 3 12h18c.471 0 .707 0 .854.146c.146.147.146.383.146.854v5c0 1.886 0 2.828-.586 3.414S19.886 22 18 22H6c-1.886 0-2.828 0-3.414-.586M8 16a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2z"
+                                        clip-rule="evenodd" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                        d="M7 3v3m10-3v3" />
+                                </g>
+                            </svg>
+                            <span>
+                                06 Oct 2025 - 08 Oct 2025
+                            </span>
+                        </span>
+
+                        <div class="flex text-gray-700 text-inter w-full justify-between">
+                            <span class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M32 32c17.7 0 32 14.3 32 32v224h224V160c0-17.7 14.3-32 32-32h160c53 0 96 43 96 96v224c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64H64v64c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-17.7 14.3-32 32-32m80 160a64 64 0 1 1 128 0a64 64 0 1 1-128 0" />
+                                </svg>
+
+                                <span class="">
+                                    1 Room
+                                </span>
+                            </span>
+
+                            <span class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path
+                                            d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor"
+                                            d="M9.5 12a4.5 4.5 0 1 0 0-9a4.5 4.5 0 0 0 0 9M21 9a3 3 0 1 1-6 0a3 3 0 0 1 6 0M9.5 13c1.993 0 3.805.608 5.137 1.466c.667.43 1.238.937 1.653 1.49c.407.545.71 1.2.71 1.901c0 .755-.35 1.36-.864 1.797c-.485.41-1.117.676-1.77.859c-1.313.367-3.05.487-4.866.487s-3.553-.12-4.865-.487c-.654-.183-1.286-.449-1.77-.859C2.349 19.218 2 18.612 2 17.857c0-.702.303-1.356.71-1.9c.415-.554.986-1.062 1.653-1.49C5.695 13.607 7.507 13 9.5 13m8.5 0c1.32 0 2.518.436 3.4 1.051c.822.573 1.6 1.477 1.6 2.52c0 .587-.253 1.073-.638 1.426c-.357.328-.809.528-1.244.66c-.87.263-1.99.343-3.118.343h-.203c.13-.348.203-.73.203-1.143c0-.99-.423-1.85-.91-2.5c-.486-.649-1.13-1.22-1.849-1.691A6.06 6.06 0 0 1 18 13" />
+                                    </g>
+                                </svg>
+
+                                <span class="">
+                                    2 Persons
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-fit flex justify-center items-center">
+                        <button
+                            class="text-xl w-full md:w-auto md:text-lg bg-[var(--color-primary)] text-white font-semibold px-8 md:px-10 py-2 rounded-full hover:bg-[var(--color-hover)] transition-all duration-300 cursor-pointer">
+                            BOOK NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto py-6 px-5 md:px-8 lg:px-0 text- text-gray-600 mt-10 border-t text-inter">
+        ©Copyright 2025 <span class="font-extrabold">Liv Lovina Hotel</span>. All Rights Reserved. Powered By <span
+            class="font-extrabold text-gray-700">A1GO BALI</span>
+    </footer>
+
+</body>
+
+</html>
