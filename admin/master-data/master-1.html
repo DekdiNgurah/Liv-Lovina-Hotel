@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="../style/style.css">
+    
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- NAVBAR -->
+    <header class="flex items-center justify-between bg-white shadow px-6 py-3 sticky top-0 z-20">
+        <div class="flex items-center gap-3">
+            <button id="sidebarToggle" class="p-2 rounded-md hover:bg-gray-200">
+                <i data-lucide="menu"></i>
+            </button>
+            <h1 class="text-xl font-semibold text-gray-800">Admin Dashboard</h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <span class="text-gray-600 hidden md:inline">Hi, Admin</span>
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                <i data-lucide="user" class="w-5 h-5 text-gray-600"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-1">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col transition-all duration-300">
+            <div class="p-4 text-gray-500 text-sm font-semibold uppercase tracking-wider">Menu</div>
+            <nav class="flex-1 px-2 space-y-1">
+
+                <!-- Dashboard -->
+                <a href="../index.html"
+                    class="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg menus transition">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- Master Data Dropdown -->
+                <div class="space-y-1">
+                    <button id="dropdownToggle"
+                        class="w-full flex items-center justify-between px-4 py-2 text-gray-700 rounded-lg menus transition active">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="database" class="w-5 h-5"></i>
+                            <span>Master Data</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"
+                            id="dropdownIcon"></i>
+                    </button>
+
+                    <div id="dropdownMenu" class="ml-11 space-y-1 hidden">
+                        <a href="master-data/master-1.html"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition active">Data
+                            Pegawai</a>
+                        <a href="#" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Data
+                            Gaji</a>
+                        <a href="#" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Data
+                            Jabatan</a>
+                    </div>
+                </div>
+
+            </nav>
+            <div class="p-4 text-gray-400 text-sm border-t border-gray-200">
+                <p>&copy; 2025 Liv Lovina Hotel</p>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <div class="p-6 bg-white rounded-2xl shadow-sm">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold text-gray-800">Data Produk</h2>
+                    <button onclick="openModal('addModal')"
+                        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                        </svg>
+                        Tambah Data
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs uppercase bg-gray-50 text-gray-700">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">Product name</th>
+                                <th scope="col" class="px-6 py-3">Color</th>
+                                <th scope="col" class="px-6 py-3">Category</th>
+                                <th scope="col" class="px-6 py-3">Price</th>
+                                <th scope="col" class="px-6 py-3 text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    Apple MacBook Pro 17"
+                                </th>
+                                <td class="px-6 py-4 text-gray-600 max-w-xs">
+                                    <p class="line-clamp-3 overflow-hidden text-ellipsis">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse
+                                        expedita quae repudiandae unde odio. Ab sint qui vero praesentium provident
+                                        nihil aperiam alias voluptate aut minus quibusdam neque at?
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600">Laptop</td>
+                                <td class="px-6 py-4 text-gray-600">$2999</td>
+                                <td class="px-6 py-4 flex justify-center gap-2">
+                                    <button onclick="openModal('viewModal')"
+                                        class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                <path fill="currentColor"
+                                                    d="M12 4C9.213 4 6.737 5.257 4.974 6.813C4.09 7.594 3.36 8.47 2.846 9.344C2.34 10.201 2 11.13 2 12s.34 1.799.846 2.656c.514.873 1.243 1.75 2.128 2.531C6.737 18.743 9.214 20 12 20c2.787 0 5.263-1.257 7.026-2.813c.885-.781 1.614-1.658 2.128-2.531C21.66 13.799 22 12.87 22 12s-.34-1.799-.846-2.656c-.514-.873-1.243-1.75-2.128-2.531C17.263 5.257 14.786 4 12 4m2 8c.36 0 .697-.095.989-.261A3 3 0 1 1 12.26 9.01A2 2 0 0 0 14 12" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal('editModal')"
+                                        class="px-2 py-2 text-xs bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z" />
+                                        </svg>
+                                    </button>
+                                    <button class="px-2 py-2 text-xs bg-red-500 text-white rounded-lg hover:bg-red-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" />
+                                            <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="32" d="M80 112h352" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    Apple MacBook Pro 17"
+                                </th>
+                                <td class="px-6 py-4 text-gray-600 max-w-xs">
+                                    <p class="line-clamp-3 overflow-hidden text-ellipsis">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse
+                                        expedita quae repudiandae unde odio. Ab sint qui vero praesentium provident
+                                        nihil aperiam alias voluptate aut minus quibusdam neque at?
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600">Laptop</td>
+                                <td class="px-6 py-4 text-gray-600">$2999</td>
+                                <td class="px-6 py-4 flex justify-center gap-2">
+                                    <button onclick="openModal('viewModal')"
+                                        class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                <path fill="currentColor"
+                                                    d="M12 4C9.213 4 6.737 5.257 4.974 6.813C4.09 7.594 3.36 8.47 2.846 9.344C2.34 10.201 2 11.13 2 12s.34 1.799.846 2.656c.514.873 1.243 1.75 2.128 2.531C6.737 18.743 9.214 20 12 20c2.787 0 5.263-1.257 7.026-2.813c.885-.781 1.614-1.658 2.128-2.531C21.66 13.799 22 12.87 22 12s-.34-1.799-.846-2.656c-.514-.873-1.243-1.75-2.128-2.531C17.263 5.257 14.786 4 12 4m2 8c.36 0 .697-.095.989-.261A3 3 0 1 1 12.26 9.01A2 2 0 0 0 14 12" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal('editModal')"
+                                        class="px-2 py-2 text-xs bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z" />
+                                        </svg>
+                                    </button>
+                                    <button class="px-2 py-2 text-xs bg-red-500 text-white rounded-lg hover:bg-red-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" />
+                                            <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="32" d="M80 112h352" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    Apple MacBook Pro 17"
+                                </th>
+                                <td class="px-6 py-4 text-gray-600 max-w-xs">
+                                    <p class="line-clamp-3 overflow-hidden text-ellipsis">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse
+                                        expedita quae repudiandae unde odio. Ab sint qui vero praesentium provident
+                                        nihil aperiam alias voluptate aut minus quibusdam neque at?
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600">Laptop</td>
+                                <td class="px-6 py-4 text-gray-600">$2999</td>
+                                <td class="px-6 py-4 flex justify-center gap-2">
+                                    <button onclick="openModal('viewModal')"
+                                        class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                <path fill="currentColor"
+                                                    d="M12 4C9.213 4 6.737 5.257 4.974 6.813C4.09 7.594 3.36 8.47 2.846 9.344C2.34 10.201 2 11.13 2 12s.34 1.799.846 2.656c.514.873 1.243 1.75 2.128 2.531C6.737 18.743 9.214 20 12 20c2.787 0 5.263-1.257 7.026-2.813c.885-.781 1.614-1.658 2.128-2.531C21.66 13.799 22 12.87 22 12s-.34-1.799-.846-2.656c-.514-.873-1.243-1.75-2.128-2.531C17.263 5.257 14.786 4 12 4m2 8c.36 0 .697-.095.989-.261A3 3 0 1 1 12.26 9.01A2 2 0 0 0 14 12" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal('editModal')"
+                                        class="px-2 py-2 text-xs bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z" />
+                                        </svg>
+                                    </button>
+                                    <button class="px-2 py-2 text-xs bg-red-500 text-white rounded-lg hover:bg-red-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" />
+                                            <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="32" d="M80 112h352" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- MODAL TAMBAH -->
+            <div id="addModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-[90%] md:w-[70%] lg:w-[90%] p-6 relative">
+                    <h2 class="text-xl font-semibold mb-6 text-gray-800">Tambah Data Produk</h2>
+                    <button onclick="closeModal('addModal')"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+
+                    <!-- FORM -->
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="product_name" class="block text-sm font-medium text-gray-700 mb-1">Product
+                                    Name</label>
+                                <input type="text" id="product_name" name="product_name"
+                                    placeholder="Masukkan nama produk"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label for="color" class="block text-sm font-medium text-gray-700 mb-1">Color</label>
+                                <input type="text" id="color" name="color" placeholder="Masukkan warna produk"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label for="category"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                                <select id="category" name="category"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                                    <option value="">-- Pilih Kategori --</option>
+                                    <option value="laptop">Laptop</option>
+                                    <option value="handphone">Handphone</option>
+                                    <option value="accessories">Accessories</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="price" class="block text-sm font-medium text-gray-700 mb-1">Price</label>
+                                <input type="number" id="price" name="price" placeholder="Masukkan harga"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                            <!-- Textarea menggunakan col-span agar lebih lebar -->
+                            <div class="md:col-span-2">
+                                <label for="description"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                <textarea id="description" name="description" rows="3"
+                                    placeholder="Masukkan deskripsi produk..."
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-3 py-2"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end gap-2 pt-4">
+                            <button type="button" onclick="closeModal('addModal')"
+                                class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition">Batal</button>
+                            <button type="submit"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- MODAL VIEW -->
+            <div id="viewModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-[90%] md:w-[50%] lg:w-[40%] p-6 relative">
+                    <h2 class="text-xl font-semibold mb-4">Lihat Data</h2>
+                    <p class="text-gray-600 mb-4">Detail informasi produk ditampilkan di sini.</p>
+                    <button onclick="closeModal('viewModal')"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">&times;</button>
+                    <div class="flex justify-end">
+                        <button onclick="closeModal('viewModal')"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Tutup</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL EDIT -->
+            <div id="editModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-[90%] md:w-[70%] lg:w-[90%] p-6 relative">
+                    <h2 class="text-xl font-semibold mb-6 text-gray-800">Edit Data Produk</h2>
+                    <p class="text-gray-600 mb-6">Perbarui data produk sesuai kebutuhan.</p>
+                    <button onclick="closeModal('editModal')"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+
+                    <!-- FORM EDIT DATA -->
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="edit_product_name"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
+                                <input type="text" id="edit_product_name" name="product_name"
+                                    value="Apple MacBook Pro 17&quot;"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label for="edit_color"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Color</label>
+                                <input type="text" id="edit_color" name="color" value="Silver"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label for="edit_category"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                                <select id="edit_category" name="category"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 px-3 py-2">
+                                    <option value="">-- Pilih Kategori --</option>
+                                    <option value="laptop" selected>Laptop</option>
+                                    <option value="handphone">Handphone</option>
+                                    <option value="accessories">Accessories</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="edit_price"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Price</label>
+                                <input type="number" id="edit_price" name="price" value="2999"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 px-3 py-2">
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="edit_description"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                <textarea id="edit_description" name="description" rows="3"
+                                    class="w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 px-3 py-2">Laptop dengan performa tinggi untuk kebutuhan profesional dan desain.</textarea>
+                            </div>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="flex justify-end gap-2 pt-4">
+                            <button type="button" onclick="closeModal('editModal')"
+                                class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition">Batal</button>
+                            <button type="submit"
+                                class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+    <script>
+        lucide.createIcons();
+
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownIcon = document.getElementById('dropdownIcon');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-ml-64');
+        });
+
+        dropdownToggle.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+            dropdownIcon.classList.toggle('rotate-180');
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>

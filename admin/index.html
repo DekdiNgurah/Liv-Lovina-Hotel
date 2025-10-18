@@ -1,131 +1,133 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        nav .active {
-            background-color: var(--color-active);
-        }
-    </style>
+    <link rel="stylesheet" href="style/style.css">
+   
 </head>
 
-<body class="bg-gray-100 min-h-screen flex">
+<body class="bg-gray-100 min-h-screen flex flex-col">
 
-    <!-- SIDEBAR -->
-    <aside id="sidebar"
-        class="bg-[var(--color-primary)] text-white w-64 min-h-screen p-5 flex flex-col fixed transition-all duration-300">
-        <div class="flex items-center justify-between mb-8">
-            <h2 class="text-2xl font-bold">Admin Panel</h2>
-            <button id="toggleSidebar" class="lg:hidden">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+    <!-- NAVBAR -->
+    <header class="flex items-center justify-between bg-white shadow px-6 py-3 sticky top-0 z-20">
+        <div class="flex items-center gap-3">
+            <button id="sidebarToggle" class="p-2 rounded-md hover:bg-gray-200">
+                <i data-lucide="menu"></i>
             </button>
+            <h1 class="text-xl font-semibold text-gray-800">Admin Dashboard</h1>
         </div>
 
-        <nav class="space-y-2">
-            <a href="#" class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-hover)] cursor-pointer transition active">
-                <i data-lucide="home"></i>
-                <span>Dashboard</span>
-            </a>
-
-            <!-- MASTER DATA -->
-            <div>
-                <button id="dropdownMaster"
-                    class="flex items-center justify-between w-full px-4 py-2 rounded-lg hover:bg-[var(--color-hover)] transition cursor-pointer">
-                    <span class="flex items-center gap-3">
-                        <i data-lucide="database"></i> Master Data
-                    </span>
-                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
-                </button>
-                <div id="masterMenu" class="hidden ml-6 mt-1 space-y-1">
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-[var(--color-hover)]">Master 1</a>
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-[var(--color-hover)]">Master 2</a>
-                </div>
+        <div class="flex items-center gap-4">
+            <span class="text-gray-600 hidden md:inline">Hi, Admin</span>
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                <i data-lucide="user" class="w-5 h-5 text-gray-600"></i>
             </div>
-
-            <!-- CMS -->
-            <div>
-                <button id="dropdownCMS"
-                    class="flex items-center justify-between w-full px-4 py-2 rounded-lg hover:bg-[var(--color-hover)] transition cursor-pointer">
-                    <span class="flex items-center gap-3">
-                        <i data-lucide="layout"></i> CMS
-                    </span>
-                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
-                </button>
-                <div id="cmsMenu" class="hidden ml-6 mt-1 space-y-1">
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-[var(--color-hover)]">CMS 1</a>
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-[var(--color-hover)]">CMS 2</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="mt-auto">
-            <button class="flex items-center gap-3 w-full px-4 py-2 rounded-lg cursor-pointer hover:bg-[var(--color-hover)] transition">
-                <i data-lucide="log-out"></i>
-                <span>Logout</span>
-            </button>
         </div>
-    </aside>
+    </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="flex-1 ml-64 p-8 transition-all duration-300">
-        <header class="flex items-center justify-between bg-white shadow rounded-xl px-6 py-4 mb-8">
-            <h1 class="text-2xl font-semibold text-gray-800">Dashboard</h1>
-            <div class="flex items-center gap-4">
-                <span class="text-gray-600">Admin</span>
-                <img src="../assets/images/icon-admin-db.png" alt="profile" class="w-10 h-10 rounded-full border border-gray-300">
-            </div>
-        </header>
+    <div class="flex flex-1">
 
-        <section class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-                <h3 class="text-lg font-semibold mb-2">Statistik 1</h3>
-                <p class="text-gray-500">Contoh konten atau grafik.</p>
+        <!-- SIDEBAR -->
+        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col transition-all duration-300">
+            <div class="p-4 text-gray-500 text-sm font-semibold uppercase tracking-wider">Menu</div>
+            <nav class="flex-1 px-2 space-y-1">
+
+                <!-- Dashboard -->
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg menus transition active">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- CMS Dropdown -->
+                <div class="space-y-1">
+                    <button id="dropdownToggle"
+                        class="w-full flex items-center justify-between px-4 py-2 text-gray-700 rounded-lg menus transition">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="layout-panel-top" class="w-5 h-5"></i>
+                            <span>CMS</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"
+                            id="dropdownIcon"></i>
+                    </button>
+
+                    <div id="dropdownMenu" class="ml-11 space-y-1 hidden">
+                        <a href="master-data/master-1.html"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Home Page</a>
+                        <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">About Us Page</a>
+                        <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Blog Page</a>
+                            <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Gallery Page</a>
+                            <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Contact Us Page</a>
+                            <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Detail Blog Page</a>
+                            <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Rooms Page</a>
+                            <a href="#"
+                            class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Detail Room Page</a>
+                    </div>
+                </div>
+
+                <a href="rooms.html"
+                    class="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg menus transition">
+                    <i data-lucide="bed-double" class="w-5 h-5"></i>
+                    <span>Rooms</span>
+                </a>
+
+            </nav>
+            <div class="p-4 text-gray-400 text-sm border-t border-gray-200">
+                <p>&copy; 2025 Liv Lovina Hotel</p>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Dashboard</h2>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl shadow p-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <img src="../assets/images/logo-berwarna.png" alt="">
+                            <p>Welcome to Admin Panel.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-                <h3 class="text-lg font-semibold mb-2">Statistik 2</h3>
-                <p class="text-gray-500">Contoh konten atau grafik.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-                <h3 class="text-lg font-semibold mb-2">Statistik 3</h3>
-                <p class="text-gray-500">Contoh konten atau grafik.</p>
-            </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
     <script>
         lucide.createIcons();
 
-        // Sidebar toggle (mobile)
-        const toggleSidebar = document.getElementById("toggleSidebar");
-        const sidebar = document.getElementById("sidebar");
-        toggleSidebar?.addEventListener("click", () => {
-            sidebar.classList.toggle("-translate-x-full");
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownIcon = document.getElementById('dropdownIcon');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-ml-64');
         });
 
-        // Dropdown Master
-        const dropdownMaster = document.getElementById("dropdownMaster");
-        const masterMenu = document.getElementById("masterMenu");
-        dropdownMaster.addEventListener("click", () => {
-            masterMenu.classList.toggle("hidden");
-        });
-
-        // Dropdown CMS
-        const dropdownCMS = document.getElementById("dropdownCMS");
-        const cmsMenu = document.getElementById("cmsMenu");
-        dropdownCMS.addEventListener("click", () => {
-            cmsMenu.classList.toggle("hidden");
+        dropdownToggle.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+            dropdownIcon.classList.toggle('rotate-180');
         });
     </script>
+
 </body>
 
 </html>
