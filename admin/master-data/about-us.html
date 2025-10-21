@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="shortcut icon" href="../../assets/images/logo-berwarna.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- NAVBAR -->
+    <header class="flex items-center justify-between bg-white shadow px-6 py-3 sticky top-0 z-20">
+        <div class="flex items-center gap-3">
+            <button id="sidebarToggle" class="p-2 rounded-md hover:bg-gray-200">
+                <i data-lucide="menu"></i>
+            </button>
+            <h1 class="text-xl font-semibold text-gray-800">Admin Dashboard</h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <span class="text-gray-600 hidden md:inline">Hi, Admin</span>
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                <i data-lucide="user" class="w-5 h-5 text-gray-600"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-1">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col transition-all duration-300">
+            <div class="p-4 text-gray-500 text-sm font-semibold uppercase tracking-wider">Menu</div>
+            <nav class="flex-1 px-2 space-y-1">
+
+                <!-- Dashboard -->
+                <a href="../index.html" class="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg menus transition">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- CMS Dropdown -->
+                <div class="space-y-1">
+                    <button id="dropdownToggle"
+                        class="w-full flex items-center justify-between px-4 py-2 text-gray-700 rounded-lg menus transition active">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="layout-panel-top" class="w-5 h-5"></i>
+                            <span>CMS</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"
+                            id="dropdownIcon"></i>
+                    </button>
+
+                    <div id="dropdownMenu" class="ml-11 space-y-1 hidden">
+                        <a href="home.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Home
+                            Page</a>
+                        <a href="about-us.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition active">About Us
+                            Page</a>
+                        <a href="blog.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Blog
+                            Page</a>
+                        <a href="gallery.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Gallery
+                            Page</a>
+                        <a href="contact-us.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Contact Us
+                            Page</a>
+                        <a href="blog-detail.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Detail
+                            Blog Page</a>
+                        <a href="rooms.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Rooms
+                            Page</a>
+                        <a href="room-detail.html" class="block px-3 py-2 text-sm text-gray-600 rounded-md menus transition">Detail
+                            Room Page</a>
+                    </div>
+                </div>
+
+                <a href="rooms.html"
+                    class="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg menus transition">
+                    <i data-lucide="bed-double" class="w-5 h-5"></i>
+                    <span>Rooms</span>
+                </a>
+
+            </nav>
+            <div class="p-4 text-gray-400 text-sm border-t border-gray-200">
+                <p>&copy; 2025 Liv Lovina Hotel</p>
+            </div>
+        </aside>
+        <!-- MAIN CONTENT -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <div class="p-6 bg-white rounded-2xl shadow-sm">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold text-gray-800">About Us Data</h2>
+                    <button onclick="openModal('addModal')"
+                        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                        </svg>
+                        Add Data
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs uppercase bg-gray-100   text-gray-700">
+                            <tr>
+                                <th scope="col" class="px-6 py-6 text-center">No</th>
+                                <th scope="col" class="px-6 py-6">Section Type</th>
+                                <th scope="col" class="px-6 py-6 text-center">Video Section</th>
+                                <th scope="col" class="px-6 py-6 text-center">Image Section</th>
+                                <th scope="col" class="px-6 py-6 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b even:bg-gray-100 hover:bg-gray-200">
+                                <th scope="row" class=" text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    1
+                                </th>
+                                <td class="px-6 py-4 text-gray-600 max-w-xs">
+                                    <p class="line-clamp-3 overflow-hidden text-ellipsis">
+                                        Hero
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600 text-center">
+                                    <a target="_blank" href="https://youtu.be/FxQTY-W6GIo?si=Rca7oGKyhZSaSgNK">
+                                        <button
+                                            class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                            Watch Video
+                                        </button>
+
+                                    </a>
+                                </td>
+
+
+                                <td class="px-6 py-4 text-gray-600">
+                                    <img class="h-12 m-auto" src="../../assets/images/about-hero.png" alt="">
+                                </td>
+                                <td class="px-6 py-4 flex justify-center gap-2">
+                                    <button onclick="openModal('viewModal')"
+                                        class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                <path fill="currentColor"
+                                                    d="M12 4C9.213 4 6.737 5.257 4.974 6.813C4.09 7.594 3.36 8.47 2.846 9.344C2.34 10.201 2 11.13 2 12s.34 1.799.846 2.656c.514.873 1.243 1.75 2.128 2.531C6.737 18.743 9.214 20 12 20c2.787 0 5.263-1.257 7.026-2.813c.885-.781 1.614-1.658 2.128-2.531C21.66 13.799 22 12.87 22 12s-.34-1.799-.846-2.656c-.514-.873-1.243-1.75-2.128-2.531C17.263 5.257 14.786 4 12 4m2 8c.36 0 .697-.095.989-.261A3 3 0 1 1 12.26 9.01A2 2 0 0 0 14 12" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal('editModal')"
+                                        class="px-2 py-2 text-xs bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z" />
+                                        </svg>
+                                    </button>
+                                    <button class="px-2 py-2 text-xs bg-red-500 text-white rounded-lg hover:bg-red-600" onclick="confirmDelete()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" />
+                                            <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="32" d="M80 112h352" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b even:bg-gray-100 hover:bg-gray-200">
+                                <th scope="row" class=" text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    2
+                                </th>
+                                <td class="px-6 py-4 text-gray-600 max-w-xs">
+                                    <p class="line-clamp-3 overflow-hidden text-ellipsis">
+                                        About
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600 text-center">
+                                    <a target="_blank" href="https://youtu.be/FxQTY-W6GIo?si=Rca7oGKyhZSaSgNK">
+                                        <button
+                                            class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                            Watch Video
+                                        </button>
+
+                                    </a>
+                                </td>
+
+
+                                <td class="px-6 py-4 text-gray-600">
+                                    <img class="h-12 m-auto" src="../../assets/images/about-hero.png" alt="">
+                                </td>
+                                <td class="px-6 py-4 flex justify-center gap-2">
+                                    <button onclick="openModal('viewModal')"
+                                        class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                <path fill="currentColor"
+                                                    d="M12 4C9.213 4 6.737 5.257 4.974 6.813C4.09 7.594 3.36 8.47 2.846 9.344C2.34 10.201 2 11.13 2 12s.34 1.799.846 2.656c.514.873 1.243 1.75 2.128 2.531C6.737 18.743 9.214 20 12 20c2.787 0 5.263-1.257 7.026-2.813c.885-.781 1.614-1.658 2.128-2.531C21.66 13.799 22 12.87 22 12s-.34-1.799-.846-2.656c-.514-.873-1.243-1.75-2.128-2.531C17.263 5.257 14.786 4 12 4m2 8c.36 0 .697-.095.989-.261A3 3 0 1 1 12.26 9.01A2 2 0 0 0 14 12" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal('editModal')"
+                                        class="px-2 py-2 text-xs bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z" />
+                                        </svg>
+                                    </button>
+                                    <button class="px-2 py-2 text-xs bg-red-500 text-white rounded-lg hover:bg-red-600" onclick="confirmDelete()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" />
+                                            <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="32" d="M80 112h352" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b even:bg-gray-100 hover:bg-gray-200">
+                                <th scope="row" class=" text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    3
+                                </th>
+                                <td class="px-6 py-4 text-gray-600 max-w-xs">
+                                    <p class="line-clamp-3 overflow-hidden text-ellipsis">
+                                        Gallery
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600 text-center">
+                                    <a target="_blank" href="https://youtu.be/FxQTY-W6GIo?si=Rca7oGKyhZSaSgNK">
+                                        <button
+                                            class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                            Watch Video
+                                        </button>
+
+                                    </a>
+                                </td>
+
+
+                                <td class="px-6 py-4 text-gray-600">
+                                    <img class="h-12 m-auto" src="../../assets/images/about-hero.png" alt="">
+                                </td>
+                                <td class="px-6 py-4 flex justify-center gap-2">
+                                    <button onclick="openModal('viewModal')"
+                                        class="px-2 py-2 text-xs bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                <path fill="currentColor"
+                                                    d="M12 4C9.213 4 6.737 5.257 4.974 6.813C4.09 7.594 3.36 8.47 2.846 9.344C2.34 10.201 2 11.13 2 12s.34 1.799.846 2.656c.514.873 1.243 1.75 2.128 2.531C6.737 18.743 9.214 20 12 20c2.787 0 5.263-1.257 7.026-2.813c.885-.781 1.614-1.658 2.128-2.531C21.66 13.799 22 12.87 22 12s-.34-1.799-.846-2.656c-.514-.873-1.243-1.75-2.128-2.531C17.263 5.257 14.786 4 12 4m2 8c.36 0 .697-.095.989-.261A3 3 0 1 1 12.26 9.01A2 2 0 0 0 14 12" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal('editModal')"
+                                        class="px-2 py-2 text-xs bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z" />
+                                        </svg>
+                                    </button>
+                                    <button class="px-2 py-2 text-xs bg-red-500 text-white rounded-lg hover:bg-red-600" onclick="confirmDelete()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" />
+                                            <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="32" d="M80 112h352" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- MODAL TAMBAH -->
+            <div id="addModal"
+                class=" hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-[90%] md:w-[70%] lg:w-[90%] p-6 relative">
+                    <h2 class="text-xl font-semibold mb-6 text-gray-800">Add Data </h2>
+                    <button onclick="closeModal('addModal')"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+
+                    <!-- FORM -->
+                      <form action="#" method="POST" class="space-y-6 " onsubmit="alert('Data Added successfully!');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="edit_id_cms"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">ID CMS</label>
+                                <input type="text" id="edit_id_cms" name="id_cms"
+                                    value="001" disabled
+                                    class="w-full border-gray-300 text-gray-600 rounded-lg  focus:ring-2 bg-gray-100 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+                            <div>
+                                <label for="edit_jenis_section"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Section Type</label>
+                                <input type="text" id="edit_jenis_section" name="jenis_section"
+                                    value="Hero"
+                                    class="w-full border-gray-300 rounded-lg  focus:ring-2 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label for="edit_Image_New"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Image New</label>
+                                <input type="file" id="edit_Image_New" name="Imageedit_Image_New"
+                                    value=""
+                                    class="w-full border-gray-300 rounded-lg  focus:ring-2 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                                
+                            </div>
+
+                               <div>
+                                <label for="edit_video_New"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">URL Video New</label>
+                                <input type="url" id="edit_video_New" name="video_New"
+                                    value="" placeholder="https://www.youtube.com/"
+                                    class="w-full border-gray-300 rounded-lg  focus:ring-2 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+            
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="flex justify-end gap-2 pt-4">
+                            <button type="button" onclick="closeModal('addModal')"
+                                class="px-4 py-2 bg-gray-200 rounded-lg border hover:bg-gray-400 transition">Cancel</button>
+                            <button type="submit"
+                                class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-800 transition">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- MODAL VIEW -->
+            <div id="viewModal"
+                class=" hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-[90%] md:w-[50%] lg:w-[40%] p-6 relative">
+                    <h2 class="text-xl font-semibold mb-4">View Data</h2>
+                    <p class="text-gray-600 mb-4">Detail information showed here.</p>
+                       <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="edit_id_cms"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">ID CMS</label>
+                                <input type="text" id="edit_id_cms" name="id_cms"
+                                    value="001" disabled
+                                    class="w-full border-gray-300 text-gray-600 rounded-lg  focus:ring-2 bg-gray-100 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+                            <div>
+                                <label for="edit_jenis_section"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Section Type</label>
+                                <input type="text" id="edit_jenis_section" name="jenis_section"
+                                    value="Hero" disabled
+                                    class="w-full border-gray-300 text-gray-700 rounded-lg  focus:ring-2 bg-gray-100 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                            <div class="col-span-2">
+                                <label for="edit_Image"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Image</label>
+                                    <img class="h-25" src="../../assets/images/about-hero.png" alt="">
+                                
+                            </div>
+                           
+                             <div class="col-span-2">
+                                <label for="edit_video"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">URL Video</label>
+                                <input type="url" id="edit_video" name="video"
+                                    value="https://youtu.be/FxQTY-W6GIo?si=Rca7oGKyhZSaSgNK" disabled
+                                    class="w-full text-gray-600 border-gray-300 rounded-lg  focus:ring-2 bg-gray-100 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+                             
+
+                        </div>
+
+                      
+                    </form> 
+                    <button onclick="closeModal('viewModal')"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">&times;</button>
+                    <div class="flex justify-end">
+                        <button onclick="closeModal('viewModal')"
+                            class="px-4 py-2 mt-5 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL EDIT -->
+            <div id="editModal"
+                class=" hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-lg w-[90%] md:w-[70%] lg:w-[90%] p-6 relative">
+                    <h2 class="text-xl font-semibold mb-6 text-gray-800">Edit Data</h2>
+                    <p class="text-gray-600 mb-6">Edit your data to update the information.</p>
+                    <button onclick="closeModal('editModal')"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+
+                    <!-- FORM EDIT DATA -->
+                    <form action="#" method="POST" class="space-y-6"  onsubmit="alert('Data Edited successfully!');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="edit_id_cms"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">ID CMS</label>
+                                <input type="text" id="edit_id_cms" name="id_cms"
+                                    value="001" disabled
+                                    class="w-full border-gray-300 text-gray-600 rounded-lg  focus:ring-2 bg-gray-100 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+                            <div>
+                                <label for="edit_jenis_section"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Section Type</label>
+                                <input type="text" id="edit_jenis_section" name="jenis_section"
+                                    value="Hero"
+                                    class="w-full border-gray-300 rounded-lg  focus:ring-2 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label for="edit_Image"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Current Image</label>
+                                    <img class="h-20" src="../../assets/images/about-hero.png" alt="">
+                                
+                            </div>
+                            <div>
+                                <label for="edit_Image_New"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">New Image</label>
+                                <input type="file" id="edit_Image_New" name="Imageedit_Image_New"
+                                    value=""
+                                    class="w-full border-gray-300 rounded-lg  focus:ring-2 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                                
+                            </div>
+
+                             <div>
+                                <label for="edit_video"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">Current URL Video</label>
+                                <input type="url" id="edit_video" name="video"
+                                    value="https://youtu.be/FxQTY-W6GIo?si=Rca7oGKyhZSaSgNK" disabled
+                                    class="w-full text-gray-600 border-gray-300 rounded-lg  focus:ring-2 bg-gray-100 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+                               <div>
+                                <label for="edit_video_New"
+                                    class="block bg-gray text-sm font-medium text-gray-700 mb-1">URL Video New</label>
+                                <input type="url" id="edit_video_New" name="video_New"
+                                    value="" placeholder="https://www.youtube.com/"
+                                    class="w-full border-gray-300 rounded-lg  focus:ring-2 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 px-3 py-2">
+                            </div>
+
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="flex justify-end gap-2 pt-4">
+                            <button type="button" onclick="closeModal('editModal')"
+                                class="px-4 py-2 bg-gray-200 rounded-lg border hover:bg-gray-400 transition">Cancel</button>
+                            <button type="submit"
+                                class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-800 transition">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+    <script>
+        lucide.createIcons();
+
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownIcon = document.getElementById('dropdownIcon');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-ml-64');
+        });
+
+        dropdownToggle.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+            dropdownIcon.classList.toggle('rotate-180');
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="../../script/script.js"></script>
+</body>
+
+</html>

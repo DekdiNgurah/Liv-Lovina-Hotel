@@ -46,4 +46,13 @@ window.addEventListener("scroll", () => {
     }
 
 })
+function confirmDelete() {
+  if (confirm("Are you sure you want to delete this item?")) {
+    // User clicked OK, proceed with deletion
+    return true; 
+  } else {
+    // User clicked Cancel, prevent deletion
+    return false;
+  }
+}
 // NAVBAR END
